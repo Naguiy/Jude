@@ -1,0 +1,164 @@
+<?php
+/*-- Favicon Setting --*/
+function blog_favicon() {
+	echo '<link rel="shortcut icon" type="image/x-icon"
+	href="'.get_bloginfo("template_url").'/img/favicon.ico" />'."\n";
+}
+
+add_action('wp_head','blog_favicon');
+
+/*-- サイドバーの追加 --*/
+register_sidebar(array(
+	'name' => __('メインサイドバー','Jude'),
+	'id' => 'sidebar-1',
+	'description' => __('メインのサイドバーです','Jude'),
+	'before_widget' => '<div id="widget1-wrapper">',
+	'after_widget' => '</div>',
+	'before_title' => '<h3 class="widget1-title">',
+	'after_title' => '</h3>',
+));
+register_sidebar(array(
+	'name' => __('フッターエリア1','Jude'),
+	'id' => 'sidebar-2',
+	'description' => __('フッターにカテゴリと検索部分を表示するウィジェット','Jude'),
+	'before_widget' => '<div id="widget2-wrapper">',
+	'after_widget' => '</div>',
+	'before_title' => '<h3 class="widget2-title">',
+	'after_title' => '</h3>',
+));
+register_sidebar(array(
+	'name' => __('フッタータグ','Jude'),
+	'id' => 'sidebar-3',
+	'description' => __('フッターにタグを表示するウィジェット','Jude'),
+	'before_widget' => '<div id="tagcloud-wrapper">',
+	'after_widget' => '</div>',
+	'before_title' => '<h3 class="tagcloud-title">',
+	'after_title' => '</h3>',
+));
+register_sidebar(array(
+	'name' => __('アーカイブ on フッター','Jude'),
+	'id' => 'sidebar-4',
+	'description' => __('フッターにアーカイブを設置するウィジェット','Jude'),
+	'before_widget' => '<div id="archive-wrapper">',
+	'after_widget' => '</div>',
+	'before_title' => '<h3 class="archive-title">',
+	'after_title' => '</h3>',
+));
+register_sidebar(array(
+	'name' => __('About TriangleReport','Jude'),
+	'id' => 'sidebar-5',
+	'description' => __('ティーレポの説明用','Jude'),
+	'before_widget' => '<div id="about-wrapper">',
+	'after_widget' => '</div>',
+	'before_title' => '<h3 class="about-title">',
+	'after_title' => '</h3>',
+));
+register_sidebar(array(
+	'name' => __('パンくずリスト','Jude'),
+	'id' => 'sidebar-6',
+	'description' => __('パンくずリスト設置用ウィジェット','Jude'),
+	'before_widget' => '<div id="pankuzu-wrapper">',
+	'after_widget' => '</div>',
+	'before_title' => '<h3 class="pankuzu-title">',
+	'after_title' => '</h3>',
+));
+
+
+/*-- 投稿にアーカイブ(投稿一覧)を持たせるようにします。 --*/
+/*--     記載後にパーマリンク設定で「変更を保存」   --*/
+function post_has_archive( $args, $post_type ) {
+	if ( 'post' == $post_type ) {
+		$args['rewrite'] = true;
+		$args['has_archive'] = 'archive'; // ページ名
+	}
+	return $args;
+}
+add_filter( 'register_post_type_args', 'post_has_archive', 10, 2 );
+
+
+/*-- 抜粋記事の文字数の設定 --*/
+function my_excerpt_length($length) {
+	if (wp_is_mobile()) {
+		return 40;
+	}
+	else if (is_new_day()) {
+		return 70;
+	}
+	else {
+		return 70;
+	}
+}
+add_filter('excerpt_length', 'my_excerpt_length');
+
+function my_excerpt_more($more) {
+    //return '<a href="'. get_permalink($more->ID). '">' . ' <i class="fa fa-angle-double-right" aria-hidden="true"></i> 続きを読む' . '</a>';
+		return ' ... ' ;
+}
+add_filter('excerpt_more', 'my_excerpt_more');
+
+
+/*-- サムネイルを定義 --*/
+add_theme_support('post-thumbnails');
+add_theme_support('menus');
+// サムネイルのサイズを指定（追加）する
+add_image_size( 'high_ratio', 700, 390, true );
+add_image_size( 'golden_ratio', 700, 435, true );
+add_image_size( 'silver_ratio', 700, 500, true );
+add_image_size( 'cinema_scope', 850, 355, true);
+
+/*-- 最新の記事とそれ以降の記事を分岐 --*/
+function isFirst() {
+	global $wp_query;
+	return ($wp_query -> current_post === 0);
+}
+
+/*-- コメントリスト 修正 --*/
+function custom_comment_list($comment, $args, $depth) {
+    $GLOBALS['comment'] = $comment; ?>
+
+    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
+        <div class="comment_meta">
+            <span class="author">
+							名前: <?php echo get_comment_author(); ?>
+            </span>
+            　
+            <span class="post_date">
+                <?php echo get_comment_date() ?> <?php echo get_comment_time() ?>
+            </span>
+        </div>
+
+        <?php comment_text() ?>
+    </li>
+<?php
+}
+
+/*-- タグクラウドの設定 --*/
+function custom_wp_tagcloud($args) {
+	$myargs = array(
+		'orderby' => 'count',
+		'order' => 'DESC',
+		'number' => 100
+	);
+	$args = wp_parse_args($args, $myargs);
+	return $args;
+}
+add_filter('widget_tag_cloud_args','custom_wp_tagcloud');
+
+
+/*----- ユーザープロフィール項目設定 -----*/
+function user_sns_meta($sns) {
+	$sns['twitter'] = 'Twitter (twitter.com/以降)';
+	$sns['facebook'] = 'Facebook (facebook.com/以降)';
+	$sns['googleplus'] = 'Google+ (plus.google.com/以降)';
+	$sns['instagram'] = 'Instagram（instagram.com/以降）';
+
+	return $sns;
+}
+add_filter('user_contactmethods','user_sns_meta',10,1);
+
+
+/*----- 管理編集画面にcssを適用 -----*/
+add_editor_style(get_template_directory_uri() . "/css/admin.css");
+
+
+ ?>

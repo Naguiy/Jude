@@ -1,0 +1,1128 @@
+.header-bg, .top-header {
+  z-index: -2;
+  background-image: none;
+  width: 100%;
+  height: 30vw;
+  box-shadow: 0 0 1px 0 #666;
+}
+#header .top-header {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#top {
+  padding: 0;
+}
+#nav {
+  position: fixed;
+}
+/*
+#header .top-header h1 {
+  top: -20%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+*/
+.container {
+  width: 1160px;
+}
+.container h2.top-post-title {
+  z-index: -1;
+  width: 800px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #fff;
+  display: inline-block;
+  position: fixed;
+  top: 15vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#sidebar {
+  min-width: 320px;
+  vertical-align: top;
+  float: right;
+}
+
+.side-search-form {
+  min-width: 320px;
+}
+
+/*
+ *
+ * contents
+ *
+ */
+
+#contents {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  padding-bottom: 1rem;
+  width: 74.4%;
+  max-width: 800px;
+  float: left;
+  background-color: none;
+  color: #000;
+  border: solid 1px #d4d4d4;
+  /*box-shadow: 0px 0px 6px grey;*/
+}
+#contents .article-list {
+  background: none;
+  padding: 2rem 1.5rem 0rem;
+}
+#contents .article-list .list-head {
+  display: none;
+  color: #111;
+  font-size: 1.8rem;
+  margin: 1rem 0 0;
+  padding: 0 0 1rem;
+}
+div#contents section.article-list article.article div.description p {
+  line-height: 2.0;
+}
+
+/*
+*
+*for arcitles
+*
+*/
+
+/* common style for articles */
+#contents .article-list .article {
+  text-align: left;
+  margin: 0 0 1rem;
+  padding: 0.5rem 0 3rem 0;
+  border-bottom: solid 1px #999;
+  position: relative;
+}
+
+#contents .article-list .article h2.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  border-top: solid 4px #19448e;
+  border-bottom: solid 4px #19448e;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+#contents .article-list .thumb {
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+#contents .article-list .article .thumb img {
+  width: 99%;
+  height: auto;
+  display: block;
+}
+
+#contents .article-list .article .description {
+  /*overflow: hidden;*/
+  vertical-align: top;
+  display: block;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+/* style for content */
+.article .description strong {
+  font-weight: bold;
+}
+
+.article .description h2 {
+  background: linear-gradient(transparent 70%, #19448e 70%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.article .description h3 {
+  border-bottom: solid 3px rgba(25, 68, 142, 0.5);
+  position: relative;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.article .description h3:after {
+  position: absolute;
+  content: " ";
+  display: block;
+  border-bottom: solid 3px #19448e;
+  bottom: -3px;
+  width: 30%;
+}
+
+.article .description h4 {
+  position: relative;
+  line-height: 1.4;
+  padding-left: 1.4rem;
+  margin-bottom: 0.7rem;
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+
+.article .description h4:before {
+  font-family: FontAwesome;
+  content: "\f00c";
+  position: absolute;
+  font-size: 1.2rem;
+  left: 0;
+  top: 0;
+  color: #ffc93c;
+}
+
+.article .description a:not(.kaerebalink-name a) {
+  text-decoration: underline;
+  opacity: 0.6
+}
+
+.article .description a:hover {
+  opacity: 1;
+}
+
+.article .description blockquote {
+  font-style: italic;
+  position: relative;
+  padding: 1rem 3rem;
+  box-sizing: border-box;
+  background-color: #efefef;
+  color: #585858;
+}
+blockquote a {
+  font-style: italic;
+}
+
+.article .description blockquote:before,
+.article .description blockquote:after {
+  display: inline-block;
+  position: absolute;
+  font-size: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  line-height: 1rem;
+  vertical-align: middle;
+  font-family: FontAwesome;
+}
+
+.article .description blockquote:before {
+  top: 18px;
+  left: 15px;
+  content: "\f10d";
+}
+
+.article .description blockquote:after {
+  bottom: -4px;
+  right: 15px;
+  content: "\f10e"
+}
+
+.article .description img {
+  width: auto;
+  height: auto;
+  max-width: 750px;
+}
+.article .description img.size-large {
+  width: 100%;
+  height: auto;
+  max-width: 750px;
+}
+
+.article .description ul {
+  box-shadow: 0px 0px 3px silver;
+  border: solid 1px whitesmoke;
+  padding: 0.5rem 1rem 0.5rem 2.3rem;
+  position: relative;
+  background: #fafafa;
+}
+
+.article .description ul li {
+  line-height: 1.5rem;
+  padding: 0.5rem 0;
+  list-style-type: none!important;
+}
+
+.article .description ul li:before {
+  font-family: FontAwesome;
+  content: '\f0da';
+  position: absolute;
+  left: 1rem;
+  color: #19448e;
+}
+
+/*
+.article .description ol#mokuji {
+  border: dotted 1px #19448e;
+  padding-left: 1.5rem;
+}
+
+.article .description ol li {
+  list-style-type: decimal;
+}
+
+.article .description ol {
+
+}
+*/
+
+.article .description aside {
+  padding: 0.5rem 1rem;
+  background-color: rgba(25, 68, 142, 0.2);
+  font-size: 0.9rem;
+}
+
+.article .description aside:before {
+  font-family: FontAwesome;
+  content: '\f0e6';
+  display: block;
+  font-size: 1.1rem;
+}
+
+.article .description table {
+  border-collapse: collapse;
+}
+
+.article .description tr:first-child {
+  padding: 3px;
+  text-align: center;
+  width: 20%;
+  color: #19448e;
+  font-weight: bold;
+  border-bottom: solid 2px #19448e;
+}
+
+.article .description td {
+  padding: 2px;
+  text-align: center;
+  width: 20%;
+  border-bottom: dashed 1px #999999;
+  vertical-align: middle;
+}
+
+.article .description tr:last-child {
+  border-bottom: solid 2px #19448e;
+}
+
+/* show the date and author */
+
+.article-info {
+  width: 100%;
+  height: 5rem;
+  position: relative;
+}
+
+.article-info .author-info {
+  float: left;
+}
+
+.article-info .author-info * {
+  vertical-align: middle;
+}
+
+.article-info .author-info img {
+  height: 2.5rem;
+  width: auto;
+}
+
+.article .date-info {
+  font-family: 'Share Tech', sans-serif;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+.article .date-info span {
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+
+.article .article-info {
+  width: 55%;
+  float: right;
+}
+
+.cat-ribbon {
+  position: absolute;
+  left: -2rem;
+  top: .5rem;
+  transform: rotate(-4deg);
+  padding: 0.2rem 0.6rem;
+  background-color: #ffc93c;
+  z-index: 1;
+  color: #000;
+  font-size: 0.8rem;
+}
+
+.cat-ribbon i {
+  transform: rotate(-32deg);
+  margin-right: 0.3rem;
+}
+
+/*
+.cat-ribbon:before {
+  font-family: FontAwesome;
+  content: '\f08d';
+  display: inline-block;
+  transform: rotate(-32deg);
+}
+*/
+
+
+
+/*
+ *
+ *for arcitles
+ *
+ */
+.article-related,
+.who-wrote {
+  background: #fff;
+  display: inline-block;
+}
+.who-wrote {
+  padding: 1rem 1.5rem 2rem;
+}
+.article-related {
+  padding: 0;
+  text-align: center;
+}
+
+#profile {
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: solid 3px #454545;
+}
+
+#meta-title {
+  font-size: 1rem;
+  font-weight: bold;
+  position: relative;
+  text-align: left;
+  background: none;
+  border-bottom: solid 3px #454545;
+  color: #000;
+  padding: 0rem 0.5rem 0rem 1.5rem;
+  margin: 3rem 0 1rem 0;
+}
+
+#meta-title:before {
+  font-family: FontAwesome;
+  display: inline-block;
+  line-height: 2rem;
+  position: absolute;
+  padding: 0rem;
+  color: white;
+  background: #454545;
+  font-weight: normal;
+  width: 2rem;
+  text-align: center;
+  height: 2rem;
+  left: -1.35rem;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border: solid 3px white;
+  border-radius: 50%;
+}
+
+.meta-author:before {
+  content: '\f040';
+}
+.meta-related-posts:before {
+  content: '\f00b';
+}
+
+
+
+#profile-thumbnail {
+  display: inline-block;
+  transform: translateY(25%);
+  width: 20%;
+  margin-right: 1rem;
+  text-align: center;
+  vertical-align: top;
+}
+
+#profile-thumbnail img {
+  display: inline-block;
+  border-radius: 50%;
+}
+
+#profile-info {
+  display: inline-block;
+  text-align: left;
+  width: 60%;
+  padding-left: 2rem;
+  border-left: solid 1px #d4d4d4;
+}
+
+#profile-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+#profile-info p {
+  margin-bottom: 0.5rem;
+}
+
+#writter-follow {
+  letter-spacing: 8px;
+}
+
+#writter-follow .follow-button {
+  display: inline-block;
+  font-size: 1.1rem;
+}
+
+#writter-follow .follow-button a {
+  display: block;
+  transition: 0.3s ease;
+}
+
+#writter-follow .follow-button .twitter:hover {
+  color: #2290bf;
+}
+#writter-follow .follow-button .facebook:hover {
+  color: #3b5598;
+}
+#writter-follow .follow-button .googleplus:hover {
+  color: #db4b39;
+}
+#writter-follow .follow-button .instagram:hover {
+  color: #2c4764;
+}
+
+
+/*
+*
+* style for related posts
+*
+*/
+
+h3#meta-title.meta-related-posts {
+  text-align: center;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+h3#meta-title.meta-related-posts:before {
+  content: '';
+  color: #454545;
+  background: none;
+  left: 27.5rem;
+  top: 55%;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border: none;
+  border-radius: 0%;
+
+}
+
+.related-entries {
+  background-color: none;
+  width: 100%;
+  vertical-align: top;
+  border: solid 1px #d4d4d4;
+}
+
+.related-entry {
+  width: 30%;
+  margin: 10px 8px 20px 8px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.related-entry-thumb, .related-entry-content {
+  vertical-align: top;
+}
+
+.related-entry-thumb {
+  width: 100%;
+  margin-right: 1rem;
+}
+
+.related-entry-content {
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+}
+
+.related-entry-title a {
+  font-weight: bold;
+  transition: 0.2s ease-out;
+}
+
+.related-entry-read {
+  text-decoration: underline;
+}
+
+.wp-post-image {
+  width: 100%;
+  height: auto;
+}
+
+.related-time {
+  font-family: 'Share Tech', sans-serif;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+
+/* related post hover effect */
+.related-entry-read a {
+  transition: 0.2s ease;
+}
+.related-entry-thumb img {
+  transition: 0.3s ease-in;
+}
+
+.related-entry:hover > .related-entry-thumb img {
+  opacity: 0.8;
+}
+.related-entry:hover > .related-entry-content .related-entry-title a{
+  opacity: 0.8;
+  color: #19448e;
+}
+.related-entry-read a:hover {
+  opacity: 0.8;
+  color: #19448e;
+}
+
+
+
+
+/*
+ *
+ * for share button
+ *
+ */
+.share-button {
+  text-align: center;
+}
+
+.share-button ul li {
+  display: inline-block;
+  width: 18%;
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.3);
+  transition: 0.2s ease-in;
+}
+
+.share-button ul li a {
+  color: #fff;
+  display: block;
+  padding: 0.7rem;
+}
+
+.share-button h2 {
+  padding: 0.5rem 0;
+  font-weight: bold;
+}
+
+.share-button .twitter {
+  background-color: #55acee;
+}
+.share-button .facebook {
+  background-color: #3b5998;
+}
+.share-button .googleplus {
+  background-color: #dd4b39;
+}
+.share-button .hatebu {
+  background-color: #3c7dd1;
+}
+.share-button .line {
+  background-color: #00c300;
+}
+
+.share-button .hatebu .hatebu-logo {
+  font-weight: bold;
+}
+
+/* share button hove effect */
+.share-button ul li:hover {
+  opacity: 0.7;
+  box-shadow: none;
+}
+
+/* facebookのいいねしようボタン */
+.p-entry__push {
+margin-bottom: 20px;
+display: table;
+table-layout: fix;
+width: 100%;
+background-color: #2b2b2b;
+color: #fff;
+}
+.p-entry__pushThumb {
+display: table-cell;
+min-width: 240px;
+background-position: center;
+background-size:cover;
+}
+.p-entry__pushLike {
+display: table-cell;
+padding: 20px;
+text-align: center;
+vertical-align: middle;
+line-height: 1.4;
+font-size: 20px;
+}
+.p-entry__pushButton {
+margin-top: 15px;
+display: inline-block;
+width: 200px;
+height: 40px;
+line-height: 40px;
+-webkit-transform: scale(1.2);
+-ms-transform: scale(1.2);
+transform: scale(1.2);
+}
+.p-entry__pushButtonLike {
+line-height: 1;
+}
+.p-entry__note {
+margin-top: 15px;
+font-size: 12px;
+color: #999;
+}
+/*
+ *
+ * 会話の吹き出し
+ *
+ */
+ /* 全体のスタイル */
+ .kaiwa {
+   margin-bottom: 40px;
+ }
+ /* 左画像 */
+ .kaiwa-img-left {
+   margin: 0;
+   float: left;
+   width: 60px;
+   height: 60px;
+ }
+ /* 右画像 */
+ .kaiwa-img-right {
+   margin: 0;
+   float: right;
+   width: 60px;
+   height: 60px;
+ }
+ .kaiwa figure img {
+   width: 100%!important;
+   height: 100%!important;
+   border: 1px solid #aaa;
+   border-radius: 50%;
+   margin: 0;
+ }
+ /* 画像の下のテキスト */
+ .kaiwa-img-description {
+   padding: 5px 0 0;
+   font-size: 0.7rem;
+   text-align: center;
+ }
+ /* 左からの吹き出しテキスト */
+ .kaiwa-text-right {
+   position: relative;
+   margin-left: 80px;
+   padding: 10px;
+   border: 1px solid #aaa;
+   border-radius: 10px;
+ }
+ /* 右からの吹き出しテキスト */
+ .kaiwa-text-left {
+   position: relative;
+   margin-right: 80px;
+   padding: 10px;
+   border: 1px solid #aaa;
+   border-radius: 10px;
+ }
+ p.kaiwa-text {
+   margin: 0 0 20px;
+ }
+ p.kaiwa-text:last-child {
+   margin-bottom: 0;
+ }
+ /* 左の三角形を作る */
+ .kaiwa-text-right:before {
+   position: absolute;
+   content: '';
+   border: 10px solid transparent;
+   border-right: 10px solid #aaa;
+   top: 15px;
+   left: -20px;
+ }
+ .kaiwa-text-right:after {
+   position: absolute;
+   content: '';
+   border: 10px solid transparent;
+   border-right: 10px solid #fff;
+   top: 15px;
+   left: -19px;
+ }
+ /* 右の三角形を作る */
+ .kaiwa-text-left:before {
+   position: absolute;
+   content: '';
+   border: 10px solid transparent;
+   border-left: 10px solid #aaa;
+   top: 15px;
+   right: -20px;
+ }
+ .kaiwa-text-left:after {
+   position: absolute;
+   content: '';
+   border: 10px solid transparent;
+   border-left: 10px solid #fff;
+   top: 15px;
+   right: -19px;
+ }
+ /* 回り込み解除 */
+ .kaiwa:after,.kaiwa:before {
+   clear: both;
+   content: "";
+   display: block;
+ }
+
+
+/*
+*
+* Table of Contents Plus
+* 目次用CSS
+*
+*
+*/
+
+#toc_container {
+  border: 5px solid #e1eff4;
+  padding: 0.5rem 1rem;
+  margin-bottom: 5rem;
+}
+
+#toc_container * {
+  transition: 0.2s;
+}
+
+#toc_container ul {
+  list-style-type: none!important;
+  border: none;
+  box-shadow: none;
+  counter-reset: li;
+  background-color: rgba(0,0,0,0);
+  padding: 0.1rem 1.2rem
+}
+
+ul.toc_list li {
+}
+
+ul.toc_list li:before {
+  display: none;
+}
+
+ul.toc_list > li {
+}
+
+.toc_title {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  border-bottom: 3px solid #e1eff4;
+  letter-spacing: 2px;
+  color: #666;
+}
+
+.toc_toggle {
+  display: inline-block;
+}
+
+#toc_container ul li a {
+  text-decoration: none;
+  opacity: 1;
+  color: #666;
+}
+
+#toc_container ul li a:hover {
+  /*color: rgba(25, 68, 142, 0.9);*/
+  color: #19448e;
+}
+
+.toc_list > li > a {
+  font-size: 1.1rem;
+  display: block;
+  border-bottom: 2px solid #19448e;
+}
+
+.toc_list > li > ul li > a {
+  display: block;
+  border-bottom: 1px dashed #19448e;
+}
+/*
+#toc_container .toc_list > li ul li {
+  list-style-type: disc!important;
+}
+*/
+
+
+/*----- amazon asociate customize css -----*/
+/*----- using KAEREBA -----*/
+
+.cstmreba {
+	width:98%;
+	height:auto;
+	margin:36px auto;
+  /*font-family:'Lucida Grande','Hiragino Kaku Gothic ProN',Helvetica, Meiryo, sans-serif;*/
+}
+.cstmreba a {
+	transition: 0.8s ;
+	color:#285EFF; /* テキストリンクカラー */
+}
+.article .description .cstmreba .kaerebalink-box .kaerebalink-image a,
+.article .description .cstmreba .booklink-box .booklink-image a,
+.article .description .cstmreba .tomarebalink-box .tomarebalink-image a {
+  opacity: 1;
+}
+.article .description .cstmreba .kaerebalink-box .kaerebalink-image a,
+.article .description .cstmreba .booklink-box .booklink-image a,
+.article .description .cstmreba .tomarebalink-box .tomarebalink-image a {
+  text-decoration: none;
+}
+
+.article .description .cstmreba .kaerebalink-box .kaerebalink-image a:hover,
+.article .description .cstmreba .booklink-box .booklink-image a:hover,
+.article .description .cstmreba .tomarebalink-box .tomarebalink-image a:hover {
+  opacity: 0.7;
+}
+.cstmreba a:hover {
+	color:#FFCA28; /* テキストリンクカラー(マウスオーバー時) */
+}
+.booklink-box, .kaerebalink-box, .tomarebalink-box {
+	width: 100%;
+	background-color: #fafafa; /* 全体の背景カラー */
+	overflow: hidden;
+	border-radius: 0px;
+	box-sizing: border-box;
+	padding: 1rem;
+	box-shadow: 0px 2px 5px 0 rgba(0,0,0,.26);
+}
+/* サムネイル画像ボックス */
+.booklink-image,
+.kaerebalink-image,
+.tomarebalink-image {
+	width:150px;
+	float:left;
+	margin:0 2rem 0 0;
+	text-align: center;
+	background: #fff;
+}
+.booklink-image a,
+.kaerebalink-image a,
+.tomarebalink-image a {
+	width:100%;
+	display:block;
+}
+.booklink-image a img, .kaerebalink-image a img, .tomarebalink-image a img {
+	margin:0 ;
+	padding: 0;
+	text-align:center;
+	background: #fff;
+}
+.booklink-info, .kaerebalink-info, .tomarebalink-info {
+	overflow:hidden;
+	line-height:170%;
+	color: #333;
+}
+/* infoボックス内リンク下線非表示 */
+.booklink-info a,
+.kaerebalink-info a,
+.tomarebalink-info a {
+	text-decoration: none;
+}
+/* 作品・商品・ホテル名 リンク */
+.booklink-name>a,
+.kaerebalink-name>a,
+.tomarebalink-name>a {
+	border-bottom: 1px solid ;
+	font-size:16px;
+}
+/* powered by */
+.booklink-powered-date,
+.kaerebalink-powered-date,
+.tomarebalink-powered-date {
+	font-size:10px;
+	line-height:150%;
+}
+.booklink-powered-date a,
+.kaerebalink-powered-date a,
+.tomarebalink-powered-date a {
+	color:#333;
+	border-bottom: none ;
+}
+.booklink-powered-date a:hover,
+.kaerebalink-powered-date a:hover,
+.tomarebalink-powered-date a:hover {
+	color:#333;
+	border-bottom: 1px solid #333 ;
+}
+/* 著者・住所 */
+.booklink-detail, .kaerebalink-detail, .tomarebalink-address {
+	font-size:12px;
+}
+.kaerebalink-link1 div img, .booklink-link2 div img, .tomarebalink-link1 div img {
+	display:none;
+}
+.booklink-link2>div,
+.kaerebalink-link1>div,
+.tomarebalink-link1>div {
+	float:left;
+	width:24%;
+	min-width:128px;
+	margin:0.5%;
+}
+/***** ボタンデザインここから ******/
+.booklink-link2 a,
+.kaerebalink-link1 a,
+.tomarebalink-link1 a {
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	box-sizing: border-box;
+	margin: 1px 0;
+	padding:3% 0.5%;
+	border-radius: 8px;
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 180%;
+	color: #fff;
+	box-shadow: 0px 2px 4px 0 rgba(0,0,0,.26);
+}
+/* トマレバ */
+.tomarebalink-link1 .shoplinkrakuten a {background: #76ae25; border: 2px solid #76ae25; }/* 楽天トラベル */
+.tomarebalink-link1 .shoplinkjalan a { background: #ff7a15; border: 2px solid #ff7a15;}/* じゃらん */
+.tomarebalink-link1 .shoplinkjtb a { background: #c81528; border: 2px solid #c81528;}/* JTB */
+.tomarebalink-link1 .shoplinkknt a { background: #0b499d; border: 2px solid #0b499d;}/* KNT */
+.tomarebalink-link1 .shoplinkikyu a { background: #bf9500; border: 2px solid #bf9500;}/* 一休 */
+.tomarebalink-link1 .shoplinkrurubu a { background: #000066; border: 2px solid #000066;}/* るるぶ */
+.tomarebalink-link1 .shoplinkyahoo a { background: #ff0033; border: 2px solid #ff0033;}/* Yahoo!トラベル */
+/* カエレバ */
+.kaerebalink-link1 .shoplinkyahoo a {background:#ff0033; border: 2px solid #ff0033;} /* Yahoo!ショッピング */
+.kaerebalink-link1 .shoplinkbellemaison a { background:#84be24 ; border: 2px solid #84be24;}	/* ベルメゾン */
+.kaerebalink-link1 .shoplinkcecile a { background:#8d124b; border: 2px solid #8d124b;} /* セシール */
+.kaerebalink-link1 .shoplinkkakakucom a {background:#314995; border: 2px solid #314995;} /* 価格コム */
+/* ヨメレバ */
+.booklink-link2 .shoplinkkindle a { background:#007dcd; border: 2px solid #007dcd;} /* Kindle */
+.booklink-link2 .shoplinkrakukobo a { background:#bf0000; border: 2px solid #bf0000;} /* 楽天kobo */
+.booklink-link2  .shoplinkbk1 a { background:#0085cd; border: 2px solid #0085cd;} /* honto */
+.booklink-link2 .shoplinkehon a { background:#2a2c6d; border: 2px solid #2a2c6d;} /* ehon */
+.booklink-link2 .shoplinkkino a { background:#003e92; border: 2px solid #003e92;} /* 紀伊國屋書店 */
+.booklink-link2 .shoplinktoshokan a { background:#333333; border: 2px solid #333333;} /* 図書館 */
+/* カエレバ・ヨメレバ共通 */
+.kaerebalink-link1 .shoplinkamazon a, .booklink-link2 .shoplinkamazon a {
+	background:#FF9901;
+	border: 2px solid #ff9901;
+} /* Amazon */
+.kaerebalink-link1 .shoplinkrakuten a, .booklink-link2 .shoplinkrakuten a {
+	background: #bf0000;
+	border: 2px solid #bf0000;
+} /* 楽天 */
+.kaerebalink-link1 .shoplinkseven a, .booklink-link2 .shoplinkseven a {
+	background:#225496;
+	border: 2px solid #225496;
+} /* 7net */
+/****** ボタンカラー ここまで *****/
+
+/***** ボタンデザイン　マウスオーバー時ここから *****/
+.booklink-link2 a:hover,
+.kaerebalink-link1 a:hover,
+.tomarebalink-link1 a:hover {
+	background: #fff;
+}
+/* トマレバ */
+.tomarebalink-link1 .shoplinkrakuten a:hover { color: #76ae25; }/* 楽天トラベル */
+.tomarebalink-link1 .shoplinkjalan a:hover { color: #ff7a15; }/* じゃらん */
+.tomarebalink-link1 .shoplinkjtb a:hover { color: #c81528; }/* JTB */
+.tomarebalink-link1 .shoplinkknt a:hover { color: #0b499d; }/* KNT */
+.tomarebalink-link1 .shoplinkikyu a:hover { color: #bf9500; }/* 一休 */
+.tomarebalink-link1 .shoplinkrurubu a:hover { color: #000066; }/* るるぶ */
+.tomarebalink-link1 .shoplinkyahoo a:hover { color: #ff0033; }/* Yahoo!トラベル */
+/* カエレバ */
+.kaerebalink-link1 .shoplinkyahoo a:hover {color:#ff0033;} /* Yahoo!ショッピング */
+.kaerebalink-link1 .shoplinkbellemaison a:hover { color:#84be24 ; }	/* ベルメゾン */
+.kaerebalink-link1 .shoplinkcecile a:hover { color:#8d124b; } /* セシール */
+.kaerebalink-link1 .shoplinkkakakucom a:hover {color:#314995;} /* 価格コム */
+/* ヨメレバ */
+.booklink-link2 .shoplinkkindle a:hover { color:#007dcd;} /* Kindle */
+.booklink-link2 .shoplinkrakukobo a:hover { color:#bf0000; } /* 楽天kobo */
+.booklink-link2 .shoplinkbk1 a:hover { color:#0085cd; } /* honto */
+.booklink-link2 .shoplinkehon a:hover { color:#2a2c6d; } /* ehon */
+.booklink-link2 .shoplinkkino a:hover { color:#003e92; } /* 紀伊國屋書店 */
+.booklink-link2 .shoplinktoshokan a:hover { color:#333333; } /* 図書館 */
+/* カエレバ・ヨメレバ共通 */
+.kaerebalink-link1 .shoplinkamazon a:hover, .booklink-link2 .shoplinkamazon a:hover {
+	color:#FF9901; } /* Amazon */
+.kaerebalink-link1 .shoplinkrakuten a:hover , .booklink-link2 .shoplinkrakuten a:hover {
+	color: #bf0000; } /* 楽天 */
+.kaerebalink-link1 .shoplinkseven a:hover, .booklink-link2 .shoplinkseven a:hover {
+	color:#225496;} /* 7net */
+/***** ボタンデザイン　マウスオーバー時ここまで *****/
+.booklink-footer {
+	clear:both;
+}
+
+
+/*
+ *
+ * Customize AppHtml
+ *
+ */
+
+article .description .appBox {
+  width: 60%;
+  /*height: 180px;*/
+  display: block;
+  box-sizing: border-box;
+  background-color: #fafafa;
+  padding: 1rem;
+  padding-bottom: 0.2rem;
+  box-shadow: 0px 2px 5px 0 rgba(0,0,0,.26);
+}
+
+article .description .appBox a {
+  color: blue;
+  text-decoration: underline;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+
+article .description .appBox a:hover {
+  opacity: 0.8;
+  /*text-decoration: none;*/
+}
+
+article .description .appBox .appName {
+  line-height: 2rem;
+}
+
+article .description .appBox .artistName {
+  font-size: 0.9rem;
+}
+
+article .description .appBox .appCategory {
+  font-size: 0.9rem;
+}
+
+article .description .appBox audio {
+  width: 100%;
+}

@@ -1,0 +1,258 @@
+/*
+ *
+ * contents
+ *
+ */
+
+#contents {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  float: none;
+  color: #000;
+  margin-bottom: 2rem;
+}
+#contents .article-list {
+  /*background: #fafbfc;*/
+  padding: 0;
+  width: 100%;
+}
+#contents .article-list .list-head {
+  display: none;
+  color: #111;
+  font-size: 1.8rem;
+  margin: 1rem 0 0;
+  padding: 0 0 1rem;
+}
+
+/*
+*
+*for arcitles
+*
+*/
+
+/* common style for articles */
+#contents .article-list .latest-article,
+#contents .article-list .article {
+  text-align: left;
+  margin: 0 0 1rem;
+  padding: 0;
+  border-top: solid 2px #000;
+  border-bottom: solid 2px #000;
+  background-color: #fff;
+  /*box-shadow: 2px 2px 8px gray;*/
+}
+
+#contents .article-list .latest-article .description .title,
+#contents .article-list .article .description .title {
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+  font-weight: bold;
+}
+
+#contents .article-list .latest-article .description .excerpt,
+#contents .article-list .article .description .excerpt {
+  display: block;
+}
+
+#contents .article-list .article .thumb,
+#contents .article-list .latest-article .thumb {
+  position: relative;
+}
+
+#contents .article-list * {
+  transition: 0.2s;
+  backface-visibility: hidden;
+}
+
+#contents .article-list .article .thumb img,
+#contents .article-list .latest-article .thumb img {
+  width: 100%;
+  height: auto;
+}
+
+#contents .article-list .article .thumb a,
+#contents .article-list .latest-article .thumb a {
+  display: block;
+}
+
+.latest-article .description a,
+.article .description a {
+  display: block;
+  color: rgba(0, 0, 0, 0.5);
+  color: #111;
+}
+
+/*----- hover effects for articles -----*/
+.article-list article:hover > .thumb a img,
+.article-list article:hover > .description a,
+.article-list article:hover > .article-info .date-info {
+   opacity: 0.8;
+}
+
+
+/* show the category and NEW ribbon */
+.post-category {
+  position: absolute;
+  top: 0;
+  /*background-color: rgba(255, 243, 82, 0.7);*/
+  background-color: rgba(25, 68, 142, 0.7);
+  padding: 0.1rem 0.5rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.latest-article .post-category {
+  right: 0;
+}
+
+.article .post-category {
+  left: 0;
+}
+
+.ribbon-area {
+  display: block;
+  position: absolute;
+  top: -15px;
+  left: 56px;
+  margin: 15px auto;
+  padding: 10px 0;
+}
+.ribbon-area * {
+  font-family: 'Nunito', sans-serif;
+}
+.new-ribbon {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  margin: 0;
+  padding: 12px 0;
+  z-index: 2;
+  width: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: black;
+  background: #ffc93c;
+}
+.new-ribbon:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 100%;
+  height: 0;
+  width: 0;
+  border-left: 20px solid #ffc93c;
+  border-right: 20px solid #ffc93c;
+  border-bottom: 10px solid transparent;
+}
+
+
+
+/* show the date and author */
+
+.article-info {
+  width: 97%;
+  height: 4rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.article-info p {
+  display: inline-block;
+}
+
+.article-info .author-info {
+  float: left;
+}
+
+.article-info .author-info * {
+  vertical-align: middle;
+}
+
+.article-info .author-info img {
+  height: 2.5rem;
+  width: auto;
+  border-radius: 50%;
+}
+
+.article-info .date-info {
+  font-family: 'Share Tech', sans-serif;
+  float: right;
+  position: absolute;
+  right: 8px;
+  top: 15%;
+  color: rgba(0, 0, 0, 1.0);
+  font-weight: bold;
+}
+
+
+.article .article-info {
+  width: 100%;
+  float: none;
+}
+
+
+/* style for latest article */
+
+#contents .article-list .latest-article .thumb {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+#contents .article-list .latest-article .description {
+  width: 97%;
+  margin: 0 auto;
+  margin-bottom: 1.7rem;
+}
+
+#contents .article-list .latest-article .description .title {
+  font-size: 1.4rem;
+}
+
+
+/* style for old articles */
+
+#contents .article-list .article {
+  padding-right: 0rem;
+}
+
+#contents .article-list .article .description {
+  /*overflow: hidden;*/
+  vertical-align: top;
+  display: block;
+  float: none;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+#contents .article-list .article .thumb {
+  width: 100%;
+  height: auto;
+  display: block;
+  float: none;
+}
+
+/* style for page views */
+.page-views {
+  font-family: 'Share Tech', sans-serif;
+  font-size: 1rem;
+  padding: 0 2px;
+  color: #204495;
+  /*background-color: #ffd100;*/
+}
+
+.page-views i {
+}
+
+/*
+ *
+ * No post
+ *
+ */
+.sorry {
+  font-size: 2rem;
+  padding: 0.5rem;
+}
