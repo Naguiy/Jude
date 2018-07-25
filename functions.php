@@ -157,6 +157,57 @@ function user_sns_meta($sns) {
 add_filter('user_contactmethods','user_sns_meta',10,1);
 
 
+/*----- ブログカードを表示するための設定 -----*/
+function get_the_custom_excerpt($content, $length) {
+ $length = ($length ? $length : 70);//デフォルトの長さを指定する
+ $content =  strip_shortcodes($content);//ショートコード削除
+ $content =  strip_tags($content);//タグの除去
+ $content =  str_replace("&nbsp;","",$content);//特殊文字の削除（今回はスペースのみ）
+ return $content;
+}
+
+//内部リンクをはてなカード風にするショートコード
+function nlink_scode($atts) {
+ extract(shortcode_atts(array(
+ 'url'=>"",
+ 'title'=>"",
+ 'excerpt'=>""
+ ),$atts));
+
+ $id = url_to_postid($url);//URLから投稿IDを取得
+ $post = get_post($id);//IDから投稿情報の取得
+
+ $img_width ="160";//画像サイズの幅指定
+ $img_height = "100";//画像サイズの高さ指定
+ $no_image = get_template_directory_uri().'/images/no-img.png';//アイキャッチ画像がない場合の画像を指定
+
+ //タイトルを取得
+ if(empty($title)){
+ $title = esc_html(get_the_title($id));
+ }
+
+ //アイキャッチ画像を取得
+ if(has_post_thumbnail($id)) {
+ $img = wp_get_attachment_image_src(get_post_thumbnail_id($id),array($img_width,$img_height));
+ $img_tag = "<img src='" . $img[0] . "' alt='{$title}' width=" . $img[1] . " height=" . $img[2] . " />";
+ } else { $img_tag ='<img src="'.$no_image.'" alt="" width="'.$img_width.'" height="'.$img_height.'" />';
+    }
+
+ $nlink .='
+<div class="blog-card"><a href="'. $url .'">
+ <div class="blog-card-thumbnail">'. $img_tag .'</div>
+ <div class="blog-card-content">
+ <div class="blog-card-title">'. $title .' </div>
+ </div>
+ <div class="clear"></div>
+</a></div>';
+
+ return $nlink;
+}
+
+add_shortcode("nlink", "nlink_scode");
+
+
 /*----- 管理編集画面にcssを適用 -----*/
 add_editor_style(get_template_directory_uri() . "/css/admin.css");
 
