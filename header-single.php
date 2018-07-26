@@ -61,7 +61,7 @@
     // カテゴリのIDの取得
     $music_id = get_cat_ID('ミュージック');
     $anime_id = get_cat_ID('アニメ');
-    $grumet_id = get_cat_ID('グルメ');
+    //$grumet_id = get_cat_ID('グルメ');
     $programing_id = get_cat_ID('プログラミング');
  	?>
 
@@ -75,7 +75,7 @@
 				<li><a href="<?php echo get_category_link($music_id); ?>">ミュージック</a></li>
 				<li><a href="<?php echo get_category_link($anime_id); ?>">アニメ</a></li>
 				<li><a href="<?php echo get_category_link($programing_id); ?>">プログラミング</a></li>
-				<li><a href="<?php echo get_category_link($grumet_id); ?>">グルメ</a></li>
+				<!--<li><a href="<?php echo get_category_link($grumet_id); ?>">グルメ</a></li>-->
 			</ul>
 		</div>
 		<div id="drawer-sns">
@@ -137,7 +137,7 @@
 					<li><a href="<?php echo get_category_link($music_id); ?>">ミュージック</a></li>
 					<li><a href="<?php echo get_category_link($anime_id); ?>">アニメ</a></li>
 					<li><a href="<?php echo get_category_link($programing_id); ?>">プログラミング</a></li>
-					<li><a href="<?php echo get_category_link($grumet_id); ?>">グルメ</a></li>
+					<!--<li><a href="<?php echo get_category_link($grumet_id); ?>">グルメ</a></li>-->
 				</ul>
 				<!--
 				<div class="search-form">

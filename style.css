@@ -1,5 +1,4 @@
-﻿@charset "UTF-8";
-
+@charset "UTF-8";
 /*
 Theme Name: Jude
 Theme URI: http://letitbe.com
@@ -22,8 +21,6 @@ main_color: #19448e
 accent_color: #fff352
 */
 
-
-
 /*
  *
  * common
@@ -32,7 +29,7 @@ accent_color: #fff352
 
 html, body {
   /*font-family: "Orienta","Sawarabi Gothic",sans-serif;*/
-  font-family: 'Orienta', YuGothic,'Yu Gothic','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
+  font-family: 'Orienta', YuGothic, 'Yu Gothic', 'ヒラギノ角ゴシック', 'Hiragino Sans', sans-serif;
   background-color: rgba(241, 241, 241, 0);
   text-align: left;
   font-size: 17px;
@@ -69,6 +66,7 @@ a {
   width: 100%;
   height: 100%;
 }
+
 .thumb img {
   overflow: hidden;
   display: block;
@@ -82,13 +80,13 @@ a {
  *
  */
 
- .header-bg, .top-header {
-   width: 100%;
-   height: 25vw;
-   box-shadow: 0 0 1px 0 #666;
- }
+.header-bg, .top-header {
+  width: 100%;
+  height: 25vw;
+  box-shadow: 0 0 1px 0 #666;
+}
 
- .header-bg {
+.header-bg {
   width: 100%;
   position: fixed;
   top: 0;
@@ -97,7 +95,7 @@ a {
   background-position: center;
   background-size: cover;
   z-index: -1;
- }
+}
 
 #header .top-header {
   background-color: rgba(0, 0, 0, 0.2);
@@ -137,6 +135,7 @@ div.top-header p.catch-frase {
 #nav a, #hidden-nav a {
   color: #000;
 }
+
 #nav {
   background: #ffd100;
   width: 100%;
@@ -174,18 +173,18 @@ div.top-header p.catch-frase {
   position: fixed;
   top: 0;
   left: 0;
- height: 2rem;
- z-index: 5;
- opacity: 0.9;
- width: 100%;
- transition: 0.3s;
- border-top: solid 2px #454545;
+  height: 2rem;
+  z-index: 5;
+  opacity: 0.9;
+  width: 100%;
+  transition: 0.3s;
+  border-top: solid 2px #454545;
 }
 
 #nav.appear:hover {
- height: 3rem;
- opacity: 1.0;
- border-bottom: solid 1px #586365;
+  height: 3rem;
+  opacity: 1.0;
+  border-bottom: solid 1px #586365;
 }
 
 #nav ul a {
@@ -206,7 +205,7 @@ div.top-header p.catch-frase {
 #nav ul li {
   display: inline-block;
   margin: 1rem 0;
-  color: rgba(0,0,0,1.0);
+  color: rgba(0, 0, 0, 1.0);
   line-height: 1rem;
   box-sizing: border-box;
   border-right: solid 3px #454545;
@@ -223,7 +222,7 @@ div.top-header p.catch-frase {
 .title-text h2 {
   font-family: 'Share Tech', sans-serif;
   font-size: 2rem;
-  font-weight:bold;
+  font-weight: bold;
   color: #000;
   transition: 0.3s;
   letter-spacing: 1px;
@@ -244,29 +243,28 @@ div.top-header p.catch-frase {
   text-decoration: underline;
 }
 
-
 /*
  *
  * nav hover effect
  *
  */
 
- #nav ul a:before,
- #nav ul a:after {
-   position: absolute;
-   left: 0;
-   width: 100%;
-   height: 2px;
-   background: #000;
-   content: '';
-   opacity: 0;
-   transition: all 0.3s ease;
+#nav ul a:before, #nav ul a:after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  content: '';
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 
 #nav ul a:before {
   top: 0;
   transform: translateY(10px);
 }
+
 #nav ul a:after {
   bottom: 0;
   transform: translateY(-10px);
@@ -276,25 +274,20 @@ div.top-header p.catch-frase {
   color: rgba(0, 0, 0, 0.7);
 }
 
-#nav ul a:hover:before,
-#nav ul a:hover:after {
+#nav ul a:hover:before, #nav ul a:hover:after {
   opacity: 1;
   transform: translateY(0);
 }
-
 
 /*
  *
  * Drawer Menu Styles
  *
  */
-#drawer-menu-haikei,
-#drawer-menu,
-#navToggle {
+
+#drawer-menu-haikei, #drawer-menu, #navToggle {
   display: none;
 }
-
-
 
 /*
  *
@@ -302,20 +295,20 @@ div.top-header p.catch-frase {
  *
  */
 
- #top {
-   text-align: left;
-   margin: 0 auto;
-   /*background-color: #fafbfc;*/
-   padding: 1rem 0;
-   position: relative;
+#top {
+  text-align: left;
+  margin: 0 auto;
+  /*background-color: #fafbfc;*/
+  padding: 1rem 0;
+  position: relative;
 }
-
 
 /*
  *
  * footer
  *
  */
+
 footer {
   width: 100%;
   background-color: #292c37;
@@ -340,10 +333,7 @@ footer a {
   padding: 1rem 0 2rem
 }
 
-#widget2-wrapper,
-#archive-search-container,
-#archive-wrapper,
-#about-wrapper {
+#widget2-wrapper, #archive-search-container, #archive-wrapper, #about-wrapper {
   display: inline-block;
   vertical-align: top;
   width: 20%;
@@ -351,8 +341,7 @@ footer a {
   text-align: left;
 }
 
-#tagcloud-wrapper,
-#about-wrapper {
+#tagcloud-wrapper, #about-wrapper {
   /*float: left;*/
   width: 50%;
 }
@@ -367,6 +356,7 @@ footer a {
   display: block;
   width: 100%;
 }
+
 #archive-wrapper:first-child {
   margin-bottom: 2rem;
 }
@@ -379,15 +369,11 @@ footer a {
 }
 */
 
-#widget2-wrapper .screen-reader-text,
-#archive-wrapper .screen-reader-text {
+#widget2-wrapper .screen-reader-text, #archive-wrapper .screen-reader-text {
   display: none;
 }
 
-.widget2-title,
-.tagcloud-title,
-.archive-title,
-.about-title {
+.widget2-title, .tagcloud-title, .archive-title, .about-title {
   font-size: 1.1rem;
   font-weight: bold;
   border-bottom: solid 1px #aaafc1;
@@ -398,11 +384,13 @@ footer a {
 .widget2-wrapper .cat-item a {
   transition: 0.2s;
 }
+
 .widget2-wrapper .cat-item a:hover {
   opacity: 0.7;
 }
 
 /*--- tag cloud ---*/
+
 .tagcloud a {
   font-size: 0.8rem !important;
   display: inline-block;
@@ -453,6 +441,7 @@ footer a {
 .tagcloud a:hover {
   background-color: rgba(255, 245, 50, 1.0);
 }
+
 .tagcloud a:hover:before {
   border-color: transparent rgba(255, 245, 50, 1.0) transparent transparent;
 }
@@ -462,6 +451,7 @@ footer a {
  * Pankuzu List
  *
  */
+
 #pankuzu-wrapper {
   text-align: left;
   margin-bottom: 0.5rem;
@@ -490,67 +480,67 @@ footer a {
  * Pagenation
  *
  */
- .pagination {
-   text-align: center;
- }
 
- a.page-numbers, .pagination .current {
-   background: #fff;
-   border: solid 1px #ccc;
-   padding: 5px 8px;
-   margin: 0 2px;
-   text-decoration: none;
-   transition: 0.2s;
- }
+.pagination {
+  text-align: center;
+}
 
- a.page-numbers:hover {
-   background: #292c37;
-   color: white;
- }
+a.page-numbers, .pagination .current {
+  background: #fff;
+  border: solid 1px #ccc;
+  padding: 5px 8px;
+  margin: 0 2px;
+  text-decoration: none;
+  transition: 0.2s;
+}
 
- .pagination .current {
-   background: #292c37;
-   border: solid 1px #292c37;
-   color: #fff;
- }
+a.page-numbers:hover {
+  background: #292c37;
+  color: white;
+}
 
- .page-numbers:not(.current):hover {
-   opacity: 0.8;
- }
+.pagination .current {
+  background: #292c37;
+  border: solid 1px #292c37;
+  color: #fff;
+}
 
+.page-numbers:not(.current):hover {
+  opacity: 0.8;
+}
 
-
- /*
+/*
   *
   * Pagetop Button
   *
   */
 
- .pagetop-btn img {
-   position: fixed;
-   bottom: -8px;
-   right: 1%;
-   opacity: 0.3;
-   transition: 0.2s ease-in;
-   width: 60px;
-   height: auto;
- }
+.pagetop-btn img {
+  position: fixed;
+  bottom: -8px;
+  right: 1%;
+  opacity: 0.3;
+  transition: 0.2s ease-in;
+  width: 60px;
+  height: auto;
+}
 
- .pagetop-btn img:hover {
-   opacity: 0.8;
- }
-
+.pagetop-btn img:hover {
+  opacity: 0.8;
+}
 
 /*
  *
  * Search form
  *
  */
- .side-search-form {
-   float: right;
-   width: 25.5%;
-   margin-bottom: 1rem;
- }
+
+.side-search-form {
+  float: right;
+  width: 25.5%;
+  margin-bottom: 1rem;
+}
+
 .search-form {
   display: block;
   float: right;
@@ -563,19 +553,20 @@ form.searchform {
 }
 
 .searchfield {
-	padding: 5px 2rem 5px 5px;
-	font-size: 14px;
-	width: 100%;
+  padding: 5px 2rem 5px 5px;
+  font-size: 14px;
+  width: 100%;
 }
+
 .searchsubmit {
-	width: 35px;
-	height: 30px;
-	padding: 0;
-	font-family: FontAwesome;
-	font-size: 20px;
-	border: none;
-	background: transparent;
-	cursor: pointer;
+  width: 35px;
+  height: 30px;
+  padding: 0;
+  font-family: FontAwesome;
+  font-size: 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
   position: absolute;
   top: 0;
   right: 0;
