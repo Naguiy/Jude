@@ -192,11 +192,10 @@ div#contents section.article-list article.article div.description p {
 
 .article .description a:not(.kaerebalink-name a) {
   text-decoration: underline;
-  opacity: 0.6
 }
 
 .article .description a:hover {
-  opacity: 1;
+  opacity: 0.9;
 }
 
 .article .description blockquote {
