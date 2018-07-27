@@ -5,7 +5,11 @@
       <span class="new-ribbon">NEW</span>
     </div>
     <a href="<?php the_permalink(); ?>">
+      <?php if (!wp_is_mobile()): ?>
       <?php the_post_thumbnail('cinema_scope'); ?>
+      <?php elseif (wp_is_mobile()): ?>
+      <?php the_post_thumbnail('high_ratio'); ?>
+      <?php endif ?>
     </a>
     <div class="post-category">
       <?php $cat = get_the_category(); ?>
@@ -25,7 +29,7 @@
             echo '<span class="page-views"><i class="fa fa-bar-chart fa-fw" aria-hidden="true"></i>'.$views.'views</span>';
           }
         ?>
--->        
+-->
       </p>
       <p class="excerpt">
         <?php the_excerpt(); ?>
