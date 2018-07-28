@@ -12,7 +12,7 @@ add_action('wp_head','blog_favicon');
 //-----------------------------------------
 /*-- Favicon Setting --*/
 //-----------------------------------------
-add_theme_support( ‘admin-bar’, array( ‘callback’ => ‘__return_false’ ) );
+add_theme_support('admin-bar', array('callback'=>'__return_false'));
 
 //-----------------------------------------
 /*-- サイドバーの追加 --*/
