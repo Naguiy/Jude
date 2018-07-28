@@ -1,5 +1,7 @@
 <?php
+//-----------------------------------------
 /*-- Favicon Setting --*/
+//-----------------------------------------
 function blog_favicon() {
 	echo '<link rel="shortcut icon" type="image/x-icon"
 	href="'.get_bloginfo("template_url").'/img/favicon.ico" />'."\n";
@@ -7,7 +9,14 @@ function blog_favicon() {
 
 add_action('wp_head','blog_favicon');
 
+//-----------------------------------------
+/*-- Favicon Setting --*/
+//-----------------------------------------
+add_theme_support( ‘admin-bar’, array( ‘callback’ => ‘__return_false’ ) );
+
+//-----------------------------------------
 /*-- サイドバーの追加 --*/
+//-----------------------------------------
 register_sidebar(array(
 	'name' => __('メインサイドバー','Jude'),
 	'id' => 'sidebar-1',
@@ -63,9 +72,10 @@ register_sidebar(array(
 	'after_title' => '</h3>',
 ));
 
-
+//--------------------------------------------------------
 /*-- 投稿にアーカイブ(投稿一覧)を持たせるようにします。 --*/
 /*--     記載後にパーマリンク設定で「変更を保存」   --*/
+//--------------------------------------------------------
 function post_has_archive( $args, $post_type ) {
 	if ( 'post' == $post_type ) {
 		$args['rewrite'] = true;
@@ -75,8 +85,9 @@ function post_has_archive( $args, $post_type ) {
 }
 add_filter( 'register_post_type_args', 'post_has_archive', 10, 2 );
 
-
+//-----------------------------------------
 /*-- 抜粋記事の文字数の設定 --*/
+//-----------------------------------------
 function my_excerpt_length($length) {
 	if (wp_is_mobile()) {
 		return 40;
@@ -96,8 +107,9 @@ function my_excerpt_more($more) {
 }
 add_filter('excerpt_more', 'my_excerpt_more');
 
-
+//-----------------------------------------
 /*-- サムネイルを定義 --*/
+//-----------------------------------------
 add_theme_support('post-thumbnails');
 add_theme_support('menus');
 // サムネイルのサイズを指定（追加）する
@@ -112,7 +124,9 @@ function isFirst() {
 	return ($wp_query -> current_post === 0);
 }
 
+//-----------------------------------------
 /*-- コメントリスト 修正 --*/
+//-----------------------------------------
 function custom_comment_list($comment, $args, $depth) {
     $GLOBALS['comment'] = $comment; ?>
 
@@ -132,7 +146,9 @@ function custom_comment_list($comment, $args, $depth) {
 <?php
 }
 
+//-----------------------------------------
 /*-- タグクラウドの設定 --*/
+//-----------------------------------------
 function custom_wp_tagcloud($args) {
 	$myargs = array(
 		'orderby' => 'count',
@@ -144,8 +160,9 @@ function custom_wp_tagcloud($args) {
 }
 add_filter('widget_tag_cloud_args','custom_wp_tagcloud');
 
-
+//-----------------------------------------
 /*----- ユーザープロフィール項目設定 -----*/
+//-----------------------------------------
 function user_sns_meta($sns) {
 	$sns['twitter'] = 'Twitter (twitter.com/以降)';
 	$sns['facebook'] = 'Facebook (facebook.com/以降)';
@@ -156,8 +173,9 @@ function user_sns_meta($sns) {
 }
 add_filter('user_contactmethods','user_sns_meta',10,1);
 
-
+//----------------------------------------------
 /*----- ブログカードを表示するための設定 -----*/
+//----------------------------------------------
 function get_the_custom_excerpt($content, $length) {
  $length = ($length ? $length : 70);//デフォルトの長さを指定する
  $content =  strip_shortcodes($content);//ショートコード削除
@@ -207,8 +225,9 @@ function nlink_scode($atts) {
 
 add_shortcode("nlink", "nlink_scode");
 
-
+//-----------------------------------------
 /*----- 管理編集画面にcssを適用 -----*/
+//-----------------------------------------
 add_editor_style(get_template_directory_uri() . "/css/admin.css");
 
 
