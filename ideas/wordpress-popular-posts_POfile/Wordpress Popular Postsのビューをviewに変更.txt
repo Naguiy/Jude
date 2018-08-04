@@ -1,0 +1,4 @@
+﻿このフォルダにある
+wordpress-popular-posts-ja.mo"を
+FFFTPを使って
+wp-content/languages/pluginsの中にアップロード
