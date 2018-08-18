@@ -268,6 +268,58 @@ blockquote a {
   color: #19448e;
 }
 
+.article .description ol {
+  counter-reset: number;
+  list-style-type: none!important;
+  padding: 0.5rem;
+  border: solid 2px #ffd110;
+}
+
+.article .description ol li {
+  position: relative;
+  padding: 0.5rem 0.5rem 0.5rem 35px;
+  line-height: 1.5rem;
+}
+
+.article .description ol li:before {
+  /* 以下ナンバリング */
+  position: absolute;
+  counter-increment: number;
+  content: counter(number);
+  /* 数字のデザインを考える */
+  display: inline-block;
+  background: #ffd110;
+  color: #454545;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 50%;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  line-height: center;
+  /* 以下 中央寄せ */
+  top: 50%;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+}
+
+.article .description ol li:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 20px;
+  height: 0;
+  width: 0;
+  border: 7px solid #ffd110;
+  /* 中央寄せ */
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
 /*
 .article .description ol#mokuji {
   border: dotted 1px #19448e;
