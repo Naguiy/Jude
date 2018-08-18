@@ -230,5 +230,44 @@ add_shortcode("nlink", "nlink_scode");
 //-----------------------------------------
 add_editor_style(get_template_directory_uri() . "/css/admin.css");
 
+//-----------------------------------------
+/*----- カスタム投稿タイプの追加 -----*/
+//-----------------------------------------
+function create_post_type() {
+	$radioPostSupports = [
+		'title', 			// 記事タイトル
+		'editor', 		// 記事本文
+		'thumbnail', 	// アイキャッチ画像
+		'revisions' 	// リビジョン
+	];
+
+	// ADD POST TYPE
+	register_post_type('radioPost', // カスタム投稿名
+		array(
+			'label' => 'ティーラジ投稿', 			// メニューに表示されるテキスト
+			'public' => true,									// 投稿タイプをパブリックにするか
+			'has_archive' => true,						// アーカイブを有効にするか
+			'menu_position' => 5,							// 管理画面上でどこに配置するか
+			'supports' => $radioPostSupports	// 投稿画面でどのmoduleを使うか的な設定
+		)
+	);
+
+	// ADD TAXONOMY
+	register_taxonomy(
+		'radio_taxonomy',
+		'radioPost',
+		array(
+			'label' => 'ティーラジ',
+			'labels' => array(
+				'all_items' => 'カテゴリ一覧',
+				'add_new_item' => '新規カテゴリを追加'
+			),
+			'heirarchical' => true
+		)
+	);
+}
+flush_rewrite_rules(false);
+add_action('init', 'create_post_type');	// アクションに上記関数をフック
+
 
  ?>
