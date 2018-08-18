@@ -244,7 +244,7 @@ function create_post_type() {
 	// ADD POST TYPE
 	register_post_type('radioPost', // カスタム投稿名
 		array(
-			'label' => 'ティーラジ投稿', 			// メニューに表示されるテキスト
+			'label' => 'ティーラジ', 			// メニューに表示されるテキスト
 			'public' => true,									// 投稿タイプをパブリックにするか
 			'has_archive' => true,						// アーカイブを有効にするか
 			'menu_position' => 5,							// 管理画面上でどこに配置するか
