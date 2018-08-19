@@ -259,6 +259,39 @@ blockquote a {
   color: #19448e;
 }
 
+.article .description ol {
+  counter-reset: number;
+  list-style-type: none!important;
+  padding: 0.5rem;
+  border: solid 2px #19448e;
+}
+
+.article .description ol li {
+  position: relative;
+  line-height: 1.5rem;
+  margin: 0.4rem 0.5rem 0.6rem 2rem;
+  padding-left: 8px;
+  font-weight: bold;
+  font-size: 0.7rem;
+  border-bottom: solid 1px #19448e;
+}
+
+.article .description ol li:before {
+  counter-increment: number;
+  content: counter(number);
+  position: absolute;
+  left: -1.6rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #19448e;
+  text-align: center;
+  color: #fff;
+  top: 53%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 .article .description aside {
   padding: 0.5rem 1rem;
   background-color: rgba(25, 68, 142, 0.2);
