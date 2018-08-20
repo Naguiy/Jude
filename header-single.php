@@ -96,26 +96,6 @@
 	</div>
 
 	<header id="header" class="clearfix">
-		<!--
-
-		<nav id="hidden-nav">
-			<div class="container">
-				<div class="title-text">
-					<a href="<?php echo home_url('/') ?>">
-						<h2><?php bloginfo('name'); ?></h2>
-					</a>
-				</div>
-				<ul>
-					<li><a href="<?php echo home_url('/') ?>">ホーム</a></li>
-					<li><a href="<?php echo get_category_link($music_id); ?>">ミュージック</a></li>
-					<li><a href="<?php echo get_category_link($anime_id); ?>">アニメ</a></li>
-					<li><a href="<?php echo get_category_link($programing_id); ?>">プログラミング</a></li>
-					<li><a href="<?php echo get_category_link($grumet_id); ?>">グルメ</a></li>
-				</ul>
-			</div>
-		</nav>
-
-		-->
 		<nav id="nav">
 			<div class="container">
 
@@ -139,37 +119,37 @@
 					<li><a href="<?php echo get_category_link($programing_id); ?>">プログラミング</a></li>
 					<li><a href="<?php echo get_category_link($grumet_id); ?>">グルメ</a></li>
 				</ul>
-				<!--
-				<div class="search-form">
-					<?php //get_search_form(); ?>
-				</div>
-			-->
 			</div>
 		</nav>
 
-
-    <div class="header-bg">
-			<?php echo get_the_post_thumbnail( $post_id, 'full' ); ?>
-    </div>
-
-    <div class="top-header">
+    <div class="top-header" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>);">
       <div class="container">
+
 				<h2 class="top-post-title"><?php the_title_attribute(); ?></h2>
+
+				<ul class="top-share-btn">
+					<li class="twitter">
+						<a href="https://twitter.com/share?url=<?php the_permalink(); ?>" target="_blank" title="Twitterで共有" data-dnt="true">
+							<i class="fa fa-twitter fa-fw" aria-hidden="true"></i>
+						</a>
+					</li>
+					<li class="facebook">
+						<a href="http://www.facebook.com/sharer.php?src=bm&u=<?php the_permalink(); ?>" target="_blank">
+							<i class="fa fa-facebook fa-fw" aria-hidden="true"></i>
+						</a>
+					</li>
+					<li class="hatebu">
+						<a href="http://b.hatena.ne.jp/add?mode=confirm&url=<?php the_permalink(); ?>" target="_blank">
+							<span class="hatebu-logo">B!</span>
+						</a>
+					</li>
+					<li class="line">
+						<a href="http://line.me/R/msg/text/?<?php the_permalink(); ?>" target="_blank">
+							<i class="fa fa-comment fa-fw" aria-hidden="true"></i>
+						</a>
+					</li>
+				</ul>
       </div>
     </div>
-		<!--
-		<div class="border-line">
-			<ul>
-				<li class="blue"></li>
-				<li class="yellow"></li>
-				<li class="skyblue"></li>
-				<li class="white"></li>
-				<li class="blue"></li>
-				<li class="yellow"></li>
-				<li class="skyblue"></li>
-				<li class="white"></li>
-			</ul>
-		</div>
-		-->
 
 	</header>
