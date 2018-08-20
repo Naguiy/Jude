@@ -16,6 +16,8 @@
 	<link href="https://fonts.googleapis.com/earlyaccess/sawarabigothic.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Orienta|Nunito|Share+Tech" rel="stylesheet">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/font-awesome.css">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fonts/sharebtn/css/icon.css">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fonts/sharebtn/css/style.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css">
 	<link rel="stylesheet" media="only screen and (min-width:769px)" href="<?php echo get_stylesheet_uri(); ?>">
 	<link rel="stylesheet" media="only screen and (max-width:768px)" href="<?php echo get_template_directory_uri(); ?>/style-mobile.css">

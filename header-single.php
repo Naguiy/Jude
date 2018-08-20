@@ -16,6 +16,8 @@
 	<link href="https://fonts.googleapis.com/earlyaccess/sawarabigothic.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Orienta|Nunito|Share+Tech" rel="stylesheet">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/font-awesome.css">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fonts/sharebtn/css/icon.css">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fonts/sharebtn/css/style.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css">
 	<link rel="stylesheet" media="only screen and (min-width:769px)" href="<?php echo get_stylesheet_uri(); ?>">
 	<link rel="stylesheet" media="only screen and (max-width:768px)" href="<?php echo get_template_directory_uri(); ?>/style-mobile.css">
@@ -127,9 +129,9 @@
 
 				<h2 class="top-post-title"><?php the_title_attribute(); ?></h2>
 
-				<ul class="top-share-btn">
-					<li class="twitter">
-						<a href="https://twitter.com/share?url=<?php the_permalink(); ?>" target="_blank" title="Twitterで共有" data-dnt="true">
+				<ul class="top-shareList">
+					<!--<li class="twitter">
+						<a href="https://twitter.com/share?url=<?php the_permalink(); ?>" target="_blank"data-dnt="true">
 							<i class="fa fa-twitter fa-fw" aria-hidden="true"></i>
 						</a>
 					</li>
@@ -143,12 +145,35 @@
 							<span class="hatebu-logo">B!</span>
 						</a>
 					</li>
-					<li class="line">
-						<a href="http://line.me/R/msg/text/?<?php the_permalink(); ?>" target="_blank">
-							<i class="fa fa-comment fa-fw" aria-hidden="true"></i>
+					<li class="pocket">
+						<a href="http://getpocket.com/edit?url=<?php the_permalink(); ?>&title=<?php the_title_attribute(); ?>" target="_blank">
+							<i class="fa fa-get-pocket fa-fw" aria-hidden="true"></i>
 						</a>
 					</li>
+					<li class="line">
+						<a href="http://line.me/R/msg/text/?<?php the_permalink(); ?>" target="_blank">
+							<i class="fa fa-get-pocket fa-fw" aria-hidden="true"></i>
+						</a>
+					</li>-->
+
+					<li class="shareList__item">
+						<a class="shareList__link icon-twitter" href="https://twitter.com/share?url=<?php the_permalink(); ?>" target="_blank" title="Twitter"></a>
+					</li>
+					<li class="shareList__item">
+						<a class="shareList__link icon-facebook" href="http://www.facebook.com/sharer.php?src=bm&u=<?php the_permalink(); ?>" target="_blank" title="Facebook"></a>
+					</li>
+					<li class="shareList__item">
+						<a class="shareList__link icon-hatebu" href="http://b.hatena.ne.jp/add?mode=confirm&url=<?php the_permalink(); ?>" target="_blank" title="はてなブックマーク"></a>
+					</li>
+					<li class="shareList__item">
+						<a class="shareList__link icon-pocket" href="http://getpocket.com/edit?url=<?php the_permalink(); ?>&title=<?php the_title_attribute(); ?>" target="_blank" title="Pocket"></a>
+					</li>
+					<li class="shareList__item">
+						<a class="shareList__link icon-line" href="http://line.me/R/msg/text/?<?php the_permalink(); ?>" target="_blank" title="LINE"></a>
+					</li>
+
 				</ul>
+
       </div>
     </div>
 

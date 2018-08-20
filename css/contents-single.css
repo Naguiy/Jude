@@ -32,7 +32,7 @@
 }
 
 #header .top-header .container {
-  position: relative;
+  background: rgba(0,0,0,0.4);
 }
 
 .container h2.top-post-title {
@@ -50,50 +50,66 @@
 
 /*
  *
- * share button in header
+ * SHARE BUTTON IN HEADER
+ * 外部のwebフォントとも連携
+ * fonts/sharebtn/cssにある
+ * style.cssとicon.css
  *
  */
 
-.top-header .container ul.top-share-btn {
+.top-header .container ul.top-shareList {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 10%;
   text-align: center;
-  letter-spacing: 8px;
 }
 
-.top-header .container ul.top-share-btn li {
+.top-header .container ul.top-shareList li {
   display: inline-block;
-  font-size: 1rem;
-}
-
-.top-header .container ul.top-share-btn li a {
-  width: 1.5rem;
-  height: 1.5rem;
+  font-size: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.6rem;;
   border-radius: 50%;
-  color: #fff;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
+  margin: 1rem;
+  background: #fff;
+}
+.top-header .container ul.top-shareList li.hatebu a span {
+  font-weight: bold;
 }
 
-.top-header .container ul.top-share-btn li.twitter a {
+.top-header .container ul.top-shareList li a {
+  color: #454545;
+}
+
+.top-header .container ul.top-shareList li a i {
+  vertical-align: center;
+}
+
+/*
+.top-header .container ul.top-shareList li.twitter {
   background: rgba(85,172,238,0.9);
 }
 
-.top-header .container ul.top-share-btn li.facebook a {
+.top-header .container ul.top-shareList li.facebook {
   background: rgba(59,89,152,0.9);
 }
 
-.top-header .container ul.top-share-btn li.hatebu a {
+.top-header .container ul.top-shareList li.hatebu {
   background: rgba(60,125,209,0.9);
 }
-
-.top-header .container ul.top-share-btn li.line a {
-  background: rgba(0,195,0,0.9);
+.top-header .container ul.top-shareList li.hatebu a span {
+  font-weight: bold;
 }
 
+.top-header .container ul.top-shareList li.pocket {
+  background: rgba(237,64,85,0.9);
+}
+*/
 
 
 /*
