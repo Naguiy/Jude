@@ -96,27 +96,6 @@
 	</div>
 
 	<header id="header" class="clearfix">
-		<!--
-
-		<nav id="hidden-nav">
-			<div class="container">
-				<div class="title-text">
-					<a href="<?php echo home_url('/') ?>">
-						<h2><?php bloginfo('name'); ?></h2>
-					</a>
-				</div>
-				<ul>
-					<li><a href="<?php echo home_url('/') ?>">ホーム</a></li>
-					<li><a href="<?php echo get_category_link($music_id); ?>">ミュージック</a></li>
-					<li><a href="<?php echo get_category_link($anime_id); ?>">アニメ</a></li>
-					<li><a href="<?php echo get_category_link($programing_id); ?>">プログラミング</a></li>
-					<li><a href="<?php echo get_category_link($grumet_id); ?>">グルメ</a></li>
-				</ul>
-			</div>
-		</nav>
-
-		-->
-    <div class="header-bg"></div>
 
     <div class="top-header">
       <div class="container">
@@ -124,20 +103,6 @@
 				<p class="catch-frase">サンニン　ノ　ユウシャ　ガ、<br>マダミヌ　アスニ　ユメヲ　イダキ、<br>スキナ　コトヲ　ハッシン　スル　ブログメディア</p>
       </div>
     </div>
-		<!--
-		<div class="border-line">
-			<ul>
-				<li class="blue"></li>
-				<li class="yellow"></li>
-				<li class="skyblue"></li>
-				<li class="white"></li>
-				<li class="blue"></li>
-				<li class="yellow"></li>
-				<li class="skyblue"></li>
-				<li class="white"></li>
-			</ul>
-		</div>
-		-->
 
 		<nav id="nav">
 			<div class="container">
