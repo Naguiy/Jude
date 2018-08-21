@@ -98,28 +98,28 @@ get_header("single");
 					<h2>この記事をシェア！</h2>
 					<ul>
 						<li class="twitter">
-							<a href="https://twitter.com/share?url=<?php the_permalink(); ?>" target="_blank" title="Twitterで共有" data-dnt="true">
-								<i class="fa fa-twitter fa-fw" aria-hidden="true"></i><span> ツイート</span>
+							<a class="faa-parent animated-hover" href="https://twitter.com/share?url=<?php the_permalink(); ?>" target="_blank" title="Twitterで共有" data-dnt="true">
+								<i class="fab fa-twitter fa-fw faa-wrench"></i><span> ツイート</span>
 							</a>
 						</li>
 						<li class="facebook">
-							<a href="http://www.facebook.com/sharer.php?src=bm&u=<?php the_permalink(); ?>" target="_blank">
-								<i class="fa fa-facebook fa-fw" aria-hidden="true"></i><span> シェア</span>
+							<a class="faa-parent animated-hover" href="http://www.facebook.com/sharer.php?src=bm&u=<?php the_permalink(); ?>" target="_blank">
+								<i class="fab fa-facebook-f fa-fw faa-wrench"></i><span> シェア</span>
 							</a>
 						</li>
 						<li class="googleplus">
-							<a href="https://plusone.google.com/_/+1/confirm?hl=ja&url=<?php the_permalink(); ?>" target="_blank">
-								<i class="fa fa-google-plus fa-fw" aria-hidden="true"></i><span> Google+</span>
+							<a class="faa-parent animated-hover" href="https://plusone.google.com/_/+1/confirm?hl=ja&url=<?php the_permalink(); ?>" target="_blank">
+								<i class="fab fa-google-plus-g fa-fw faa-wrench"></i><span> Google+</span>
 							</a>
 						</li>
 						<li class="hatebu">
-							<a href="http://b.hatena.ne.jp/add?mode=confirm&url=<?php the_permalink(); ?>" target="_blank">
-								<span class="hatebu-logo">B!</span><span> はてブ</span>
+							<a class="faa-parent animated-hover" href="http://b.hatena.ne.jp/add?mode=confirm&url=<?php the_permalink(); ?>" target="_blank">
+								<span class="hatebu-logo faa-wrench">B!</span><span> はてブ</span>
 							</a>
 						</li>
 						<li class="line">
-							<a href="http://line.me/R/msg/text/?<?php the_permalink(); ?>" target="_blank">
-								<i class="fa fa-comment fa-fw" aria-hidden="true"></i><span> LINE</span>
+							<a class="faa-parent animated-hover" href="http://line.me/R/msg/text/?<?php the_permalink(); ?>" target="_blank">
+								<i class="fab fa-line fa-fw faa-wrench"></i><span> LINE</span>
 							</a>
 						</li>
 					</ul>

@@ -3,7 +3,7 @@
 </div>
 
 <div id="sidebar">
-	
+
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- サイドバーディスプレイ -->
 <ins class="adsbygoogle"
@@ -42,7 +42,7 @@
         <?php if(!empty($twitter)) : ?>
           <span class="follow-button">
             <a class="twitter" href="//twitter.com/<?php echo $twitter; ?>" rel="nofollow" target="_blank" title="Twitterをフォロー">
-              <i aria-hidden="true" class="fa fa-twitter fa-fw fa-size"></i>
+              <i aria-hidden="true" class="fab fa-twitter fa-fw fa-size"></i>
             </a>
           </span>
         <?php endif; ?>
@@ -50,7 +50,7 @@
         <?php if(!empty($facebook)) : ?>
           <span class="follow-button">
             <a class="facebook" href="//www.facebook.com/<?php echo $facebook; ?>" rel="nofollow" target="_blank" title="Facebookをフォロー">
-              <i aria-hidden="true" class="fa fa-facebook fa-fw fa-size"></i>
+              <i aria-hidden="true" class="fab fa-facebook-f fa-fw fa-size"></i>
             </a>
           </span>
         <?php endif; ?>
@@ -58,7 +58,7 @@
         <?php if(!empty($googleplus)) : ?>
          <span class="follow-button">
            <a class="googleplus" href="//plus.google.com/<?php echo $googleplus; ?>" rel="nofollow" target="_blank" title="Google+をフォロー">
-             <i aria-hidden="true" class="fa fa-google-plus fa-fw fa-size"></i>
+             <i aria-hidden="true" class="fab fa-google-plus-g fa-fw fa-size"></i>
            </a>
          </span>
         <?php endif; ?>
@@ -66,7 +66,7 @@
         <?php if(!empty($instagram)) : ?>
           <span class="follow-button">
             <a class="instagram" href="//www.instagram.com/<?php echo $instagram; ?>" target="_blank" title="Instagramをフォロー" rel="nofollow">
-              <i class="fa fa-instagram fa-fw fa-size" aria-hidden="true"></i>
+              <i class="fab fa-instagram fa-fw fa-size"></i>
             </a>
           </span>
         <?php endif; ?>
