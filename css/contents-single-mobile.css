@@ -127,6 +127,7 @@ div#contents section.article-list article.article div.description p {
 }
 .who-wrote {
   padding: 0 0.5rem;
+  width: 100%;
 }
 
 /* common style for articles */

@@ -519,7 +519,7 @@ div.top-header p.catch-frase {
 }
 
 #drawer-menu ul li {
-  padding: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 #drawer-menu ul li a {
   font-size: 1.3rem;
