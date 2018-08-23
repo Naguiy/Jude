@@ -1,19 +1,53 @@
 /*
  *
+ * Import URL
+ *
+ */
+@import url('https://fonts.googleapis.com/css?family=Share+Tech|Yanone+Kaffeesatz');
+
+
+/*
+ *
  *for arcitles
  *
  */
+body.mceContentBody {
+  font-size: 16px;
+  font-family: 'Orienta', YuGothic, 'Yu Gothic', 'ヒラギノ角ゴシック', 'Hiragino Sans', sans-serif;
+}
+.editor-area {
+  line-height: 2;
+}
 
 /* style for content */
-strong {
+strong,
+h2 *,
+h3 *,
+ol li {
   font-weight: bold;
 }
 
 h2 {
-  background: linear-gradient(transparent 70%, #19448e 70%);
   font-size: 1.5rem;
-  font-weight: bold;
-  margin: 1rem 0;
+  letter-spacing: 1px;
+  margin: 2rem 0;
+  position: relative;
+  color: #fff;
+  padding: 0.5rem 0.5rem 0.5rem 1.4rem;
+  background-color: #0b204a;
+}
+
+h2:after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  content: '';
+  width: 18px;
+  height: 4px;
+  background-color: #fff;
 }
 
 h3 {
@@ -41,7 +75,8 @@ h3:after {
 }
 
  h4:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
   content: "\f00c";
   position: absolute;
   font-size: 1.2rem;
@@ -58,12 +93,18 @@ blockquote {
   background-color: #efefef;
   color: #585858;
 }
-blockquote a {
+blockquote p a * {
   font-style: italic;
+}
+blockquote p a:hover {
+  opacity: 0.7;
 }
 
 blockquote:before,
 blockquote:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-style: normal;
   display: inline-block;
   position: absolute;
   font-size: 1.5rem;
@@ -71,7 +112,6 @@ blockquote:after {
   height: 2rem;
   line-height: 1rem;
   vertical-align: middle;
-  font-family: FontAwesome;
 }
 
 blockquote:before {
@@ -89,7 +129,7 @@ blockquote:after {
 img {
   width: auto;
   height: auto;
-  max-width: 300px;
+  max-width: 750px;
 }
 img.size-large {
   width: 100%;
@@ -112,11 +152,36 @@ ul li {
 }
 
 ul li:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
   content: '\f0da';
   position: absolute;
   left: 1rem;
   color: #19448e;
+}
+
+ol {
+  counter-reset: number;
+  list-style-type: none!important;
+  padding: 0;
+  border-top: solid 2px #454545;
+  border-bottom: solid 2px #454545;
+}
+
+ol li {
+  position: relative;
+  padding: 0.5rem 0;
+  line-height: 1.3rem;
+  padding-left: 1.8rem;
+}
+
+ol li:before {
+  counter-increment: number;
+  content: counter(number)'. ';
+  position: absolute;
+  left: 0;
+  font-family: 'Share Tech', sans-serif;
+  font-size: 1.1rem;
 }
 
 aside {
@@ -126,8 +191,9 @@ aside {
 }
 
 aside:before {
-  font-family: FontAwesome;
-  content: '\f0e6';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: '\f086';
   display: block;
   font-size: 1.1rem;
 }
@@ -351,7 +417,6 @@ tr:last-child {
  	width:98%;
  	height:auto;
  	margin:36px auto;
- 	/*font-family:'Lucida Grande','Hiragino Kaku Gothic ProN',Helvetica, Meiryo, sans-serif;*/
  }
  .cstmreba a {
  	transition: 0.8s ;

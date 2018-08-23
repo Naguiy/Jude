@@ -228,7 +228,7 @@ add_shortcode("nlink", "nlink_scode");
 //-----------------------------------------
 /*----- 管理編集画面にcssを適用 -----*/
 //-----------------------------------------
-add_editor_style(get_template_directory_uri() . "/css/admin.css");
+add_editor_style(get_template_directory_uri() . "/css/editor-style.css");
 
 //-----------------------------------------
 /*----- カスタム投稿タイプの追加 -----*/
