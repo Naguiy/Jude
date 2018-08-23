@@ -10,7 +10,7 @@
 	<div class="clearfix" id="profile">
 
 		<h3 id="meta-title" class="meta-author">
-      <i class="fa fa-pencil" aria-hidden="true"></i> この記事を書いた人
+      <i class="fas fa-pen-alt fa-fw"></i> この記事を書いた人
     </h3>
 
 		<div id="profile-thumbnail">

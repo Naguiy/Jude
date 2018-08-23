@@ -10,7 +10,7 @@ get_header("single");
 
 		<div id="top" class="container clearfix">
 			<div class="cat-ribbon">
-				<i class="fa fa-thumb-tack fa-fw" aria-hidden="true"></i>
+				<i class="fa fa-thumbtack fa-fw" aria-hidden="true"></i>
 				<?php $cat = get_the_category(); ?>
 	      <?php $cat = $cat[0]; ?>
 	      <?php echo get_cat_name($cat->term_id); ?>
@@ -26,7 +26,7 @@ get_header("single");
 
 							<p class="date-info">
 								<span style="margin-right:1rem;"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i><?php the_time('Y.m.d'); ?></span>
-								<i class="fa fa-repeat fa-fw fa-rotate-180" aria-hidden="true"></i><?php the_modified_date('Y.m.d'); ?>
+								<i class="fas fa-redo-alt fa-fw fa-rotate-180" aria-hidden="true"></i><?php the_modified_date('Y.m.d'); ?>
 							</p>
 
 							<!--<h2 class="title"><?php the_title(); ?></h2>-->
@@ -34,6 +34,26 @@ get_header("single");
 						  <div class="thumb">
 						      <?php the_post_thumbnail('high_ratio'); ?>
 						  </div>
+
+							<ul class="top-shareList disapearPC">
+
+								<li class="shareList__item">
+									<a class="shareList__link icon-twitter" href="https://twitter.com/share?url=<?php the_permalink(); ?>" target="_blank" title="Twitter"></a>
+								</li>
+								<li class="shareList__item">
+									<a class="shareList__link icon-facebook" href="http://www.facebook.com/sharer.php?src=bm&u=<?php the_permalink(); ?>" target="_blank" title="Facebook"></a>
+								</li>
+								<li class="shareList__item">
+									<a class="shareList__link icon-hatebu" href="http://b.hatena.ne.jp/add?mode=confirm&url=<?php the_permalink(); ?>" target="_blank" title="はてなブックマーク"></a>
+								</li>
+								<li class="shareList__item">
+									<a class="shareList__link icon-pocket" href="http://getpocket.com/edit?url=<?php the_permalink(); ?>&title=<?php the_title_attribute(); ?>" target="_blank" title="Pocket"></a>
+								</li>
+								<li class="shareList__item">
+									<a class="shareList__link icon-line" href="http://line.me/R/msg/text/?<?php the_permalink(); ?>" target="_blank" title="LINE"></a>
+								</li>
+
+							</ul>
 
 						  <div class="description">
 						      <p class="post-content">
@@ -95,7 +115,9 @@ get_header("single");
 				<?php endif; ?>
 				<!-- 記事がよかったらいいね　ここまで -->
 				<div class="share-button">
-					<h2>この記事をシェア！</h2>
+					<h2 style="font-size:1.2rem;">
+						\ この記事をシェア！ /
+					</h2>
 					<ul>
 						<li class="twitter">
 							<a class="faa-parent animated-hover" href="https://twitter.com/share?url=<?php the_permalink(); ?>" target="_blank" title="Twitterで共有" data-dnt="true">
@@ -128,12 +150,23 @@ get_header("single");
 				<section class="who-wrote">
 					<?php get_template_part('profile'); ?>
 				</section>
+
+				<section id="nearPost">
+					<div class="prev">
+						<?php previous_post_link('%link', '<i class="fas fa-angle-double-left fa-fw"></i>前の記事<br>%title'); ?>
+					</div>
+					<div class="next">
+						<?php next_post_link('%link', '次の記事<i class="fas fa-angle-double-right fa-fw"></i><br>%title'); ?>
+					</div>
+				</section>
 			</div>
 
 			<?php get_sidebar(); ?>
 
 			<section class="article-related">
-				<h3 id="meta-title" class="meta-related-posts"><i class="fa fa-th-list fa-fw" aria-hidden="true"></i>おすすめの記事</h3>
+				<h3 id="meta-title" class="meta-related-posts">
+					<i class="fas fa-tag fa-fw"></i> おすすめの記事
+				</h3>
 				<div class="related-entries">
 					<?php get_template_part('related','posts'); ?>
 				</div>

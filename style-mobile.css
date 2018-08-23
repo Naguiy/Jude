@@ -61,7 +61,8 @@ a {
   left: 0;
   padding: 0rem 0 3rem;
   background: #fff;
-  border-top: solid 2px #454545;
+  /*border-top: solid 2px #454545;*/
+  overflow: hidden;
 }
 
 .thumb {
@@ -74,6 +75,15 @@ a {
   max-width: 100%;
   max-height: 100%;
 }
+.disapearMB {
+  display: none;
+}
+
+div.container.bread {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 
 /*
  *
@@ -100,14 +110,23 @@ a {
  }
 
 #header .top-header {
+  background-image: url("./img/header_image.jpg");
+  background-position: center;
+  background-size: cover;
   background-color: rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 3px 0 #999;
-  /*border-bottom: solid 1px #ea5532;*/
   position: relative;
-  padding-bottom: 0.3rem;
   overflow: hidden;
   transition: 0.5s;
   margin-top: 2rem;
+}
+
+#header .top-header .container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
 }
 
 div.top-header h1.site-title {
@@ -285,6 +304,64 @@ div.top-header p.catch-frase {
 
 /*
  *
+ * Radio Banners Style
+ *
+ */
+#radioBanner {
+  text-align: center;
+  line-height: 2.5rem;
+  background: #ffd100;
+  position: relative;
+  -webkit-box-shadow: 0px 2px 4px 0px #999;
+  box-shadow: 0px 2px 4px 0px #999;
+  z-index: 1;
+}
+
+#radioBanner a {
+  color: #353535;
+  font-weight: bold;
+}
+
+
+/*
+ *
+ * Radio Banners in Drawer Menu
+ *
+ */
+.__radioBanner {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.__radioBanner a p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.__radioBanner a:first-child p {
+  display: block;
+  background: #ffd100;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 50%;
+}
+
+.__radioBanner a:first-child p svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  fill: #1d1d1d;
+}
+
+
+/*
+ *
  * Drawer Menu Styles
  *
  */
@@ -453,7 +530,7 @@ div.top-header p.catch-frase {
 #drawer-sns {
   width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  margin-bottom: 12vw;
 }
 #drawer-sns ul {
   width: 100%;
@@ -563,7 +640,7 @@ div.top-header p.catch-frase {
  */
 footer {
   width: 100%;
-  background-color: #454545;
+  background-color: #292c31;
   color: #ffecf0;
 }
 
@@ -827,7 +904,8 @@ form.searchform {
 	width: 35px;
 	height: 30px;
 	padding: 0;
-	font-family: FontAwesome;
+	font-family: "Font Awesome 5 Free";
+  font-weight: 900;
 	font-size: 20px;
 	border: none;
 	background: transparent;

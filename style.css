@@ -59,7 +59,7 @@ a {
   left: 0;
   padding: 1rem 0 3rem;
   /*background: #f4f5f7;*/
-  border-top: solid 2px #454545;
+  border-top: solid 3px #454545;
 }
 
 .thumb {
@@ -73,6 +73,10 @@ a {
   max-width: 100%;
   max-height: 100%;
 }
+.disapearPC {
+  display: none;
+}
+
 
 /*
  *
@@ -151,7 +155,7 @@ div.top-header p.catch-frase {
   transition: 0.3s;
   text-align: center;
   position: relative;
-  border-top: solid 5px #454545;
+  border-top: solid 3px #454545;
 }
 
 #nav .container {
@@ -569,7 +573,8 @@ form.searchform {
   width: 35px;
   height: 30px;
   padding: 0;
-  font-family: FontAwesome;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
   font-size: 20px;
   border: none;
   background: transparent;

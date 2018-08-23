@@ -89,31 +89,42 @@ h2{
 	color:#ffffff;
 	text-decoration: none;
 }
-.shareList__link::before{
-	font-size:17px;
-	display:block;
-	border-radius: 50%;
-	transition: ease-in-out .2s;
+@media screen and (max-width:768px) {
+	.shareList__link::before{
+		color: #fff;
+		font-size:17px;
+		display:block;
+		transition: ease-in-out .2s;
+	}
 }
+@media screen and (min-width:769px) {
+	.shareList__link::before{
+		color: #fff;
+		font-size:17px;
+		display:block;
+		border-radius: 50%;
+		transition: ease-in-out .2s;
+		-webkit-box-shadow: 0px 0px 0px 2px #454545;
+	  box-shadow: 0px 0px 0px 2px #454545;
+	}
+}
+.shareList__link.icon-twitter::before{background:#55acee;}
+.shareList__link.icon-facebook::before{background:#3b5998;}
+.shareList__link.icon-hatebu::before{background:#008fde;}
+.shareList__link.icon-pocket::before{background:#eb4654;}
+.shareList__link.icon-line::before{background:#1dcd00;}
+
 .shareList__link:hover::before{
-	/*background:#ffffff;*/
+	background:#ffffff;
 	transform: scale(1.2);
 	box-shadow:1px 1px 4px 0px rgba(0,0,0,0.15);
-	color: #fff;
 }
 
-.shareList__link.icon-twitter:hover::before{background:#55acee;}
-
-.shareList__link.icon-facebook:hover::before{background:#3B5998;}
-
-.shareList__link.icon-google-plus:hover::before{background:#dd4b39;}
-
-.shareList__link.icon-hatebu:hover::before{background:#008FDE;}
-
-.shareList__link.icon-pocket:hover::before{background:#EB4654;}
-
-.shareList__link.icon-line:hover::before{background:#1dcd00;}
-
+.shareList__link.icon-twitter:hover::before{color:#55acee;}
+.shareList__link.icon-facebook:hover::before{color:#3B5998;}
+.shareList__link.icon-hatebu:hover::before{color:#008FDE;}
+.shareList__link.icon-pocket:hover::before{color:#EB4654;}
+.shareList__link.icon-line:hover::before{color:#1dcd00;}
 
 
 /*ソーシャルリストデザイン6*/

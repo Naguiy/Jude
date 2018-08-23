@@ -254,18 +254,18 @@ function create_post_type() {
 
 	// ADD TAXONOMY
 	register_taxonomy(
-		'radio_taxonomy',
-		'radioPost',
+		'radiopost_cat',
+		'radiopost',
 		array(
-			'label' => 'ティーラジ',
-			'labels' => array(
-				'all_items' => 'カテゴリ一覧',
-				'add_new_item' => '新規カテゴリを追加'
-			),
-			'heirarchical' => true
+			'update_count_callback' => '_update_post_term_count',
+			'heirarchical' => true,
+			'label' => 'ラジオカテゴリー',
+			'public' => true,
+			'show_ui' => true
 		)
 	);
 }
+
 flush_rewrite_rules(false);
 add_action('init', 'create_post_type');	// アクションに上記関数をフック
 

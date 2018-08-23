@@ -29,7 +29,8 @@ h3.widget1-title {
 
 h3.widget1-title:before, h3.widget1-title:after {
   position: relative;
-  font-family: "FontAwesome";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
   display: inline-block;
   font-size: 1.2rem;
   color: #454545;
@@ -115,7 +116,8 @@ h3.widget1-title:after {
 }
 
 span.wpp-views:before {
-  font-family: 'FontAwesome';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
   content: '\f080';
   display: inline-block;
   line-height: 1rem;
@@ -199,7 +201,8 @@ span.wpp-views:before {
 }
 
 #widget1-wrapper li.cat-item:before {
-  font-family: 'FontAwesome';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
   content: '\f138';
   position: absolute;
   left: 0.5rem;
@@ -299,14 +302,22 @@ span.wpp-views:before {
 
 .sns-follow span {
   display: inline-block;
+  width: 1.8rem;
+  height: 1.8rem;
+  border: dashed 1px #454545;
+  border-radius: 50%;
+  margin: 0 4px;
 }
 
+/*
 .fa-size {
   font-size: 1.3rem;
 }
+*/
 
 .sns-follow .follow-button a {
-  transition: 0.3s ease;
+  transition: 0.2s ease;
+  line-height: 1.8rem;
 }
 
 .sns-follow .follow-button .twitter:hover {

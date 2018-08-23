@@ -15,7 +15,7 @@
 
 	<link href="https://fonts.googleapis.com/earlyaccess/sawarabigothic.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Orienta|Nunito|Share+Tech" rel="stylesheet">
-	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fonts/sharebtn/css/icon.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fonts/sharebtn/css/style.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css">
@@ -24,12 +24,17 @@
 	<link rel="stylesheet" media="only screen and (min-width:769px)" href="<?php echo get_template_directory_uri(); ?>/css/sidebar.css">
 	<link rel="stylesheet" media="only screen and (max-width:768px)" href="<?php echo get_template_directory_uri(); ?>/css/sidebar-mobile.css">
 	<?php if (!is_single()): ?>
-		<link rel="stylesheet" media="only screen and (min-width:769px)" href="<?php echo get_template_directory_uri(); ?>/css/contents.css">
-		<link rel="stylesheet" media="only screen and (max-width:768px)" href="<?php echo get_template_directory_uri(); ?>/css/contents-mobile.css">
-	<?php elseif (is_single()): ?>
-		<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
-		<link rel="stylesheet" media="only screen and (min-width:769px)" href="<?php echo get_template_directory_uri(); ?>/css/contents-single.css">
-		<link rel="stylesheet" media="only screen and (max-width:768px)" href="<?php echo get_template_directory_uri(); ?>/css/contents-single-mobile.css">
+	<link rel="stylesheet" media="only screen and (min-width:769px)" href="<?php echo get_template_directory_uri(); ?>/css/contents.css">
+	<link rel="stylesheet" media="only screen and (max-width:768px)" href="<?php echo get_template_directory_uri(); ?>/css/contents-mobile.css">
+	<?php elseif (is_single() && is_singular( 'post' )): ?>
+	<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
+	<link rel="stylesheet" media="only screen and (min-width:769px)" href="<?php echo get_template_directory_uri(); ?>/css/contents-single.css">
+	<link rel="stylesheet" media="only screen and (max-width:768px)" href="<?php echo get_template_directory_uri(); ?>/css/contents-single-mobile.css">
+	<?php elseif (is_single() || is_singular( 'radioPost' )): ?>
+	<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
+	<link rel="stylesheet" media="only screen and (min-width:769px)" href="<?php echo get_template_directory_uri(); ?>/css/contents-single.css">
+	<link rel="stylesheet" media="only screen and (max-width:768px)" href="<?php echo get_template_directory_uri(); ?>/css/contents-single-mobile.css">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/contents-single-radioPost.css">
 	<?php endif; ?>
 
 	<?php wp_head(); ?>
@@ -73,7 +78,6 @@
 		</div>
 		<div id="drawer-menu">
 			<ul>
-				<li><a href="<?php echo home_url('/') ?>">ホーム</a></li>
 				<li><a href="<?php echo get_category_link($music_id); ?>">ミュージック</a></li>
 				<li><a href="<?php echo get_category_link($anime_id); ?>">アニメ</a></li>
 				<li><a href="<?php echo get_category_link($programing_id); ?>">プログラミング</a></li>
@@ -84,16 +88,28 @@
 			<ul>
 				<li class="twitr">
 					<a href="//twitter.com/TriangleReport" rel="nofollow" target="_blank" title="Twitterをフォロー">
-						<i aria-hidden="true" class="fa fa-twitter-square fa-fw fa-2x"></i>
+						<i aria-hidden="true" class="fab fa-twitter-square fa-fw fa-2x"></i>
 					</a>
 				</li>
 				<li class="facebk">
 					<a href="//www.facebook.com/T-report-1509165772455564/" rel="nofollow" target="_blank" title="Facebookをフォロー">
-						<i aria-hidden="true" class="fa fa-facebook-square fa-fw fa-2x"></i>
+						<i aria-hidden="true" class="fab fa-facebook-square fa-fw fa-2x"></i>
 					</a>
 				</li>
 			</ul>
 			<p>FOLLOW US</p>
+		</div>
+		<div class="__radioBanner">
+			<a href="<?php echo home_url('/') ?>radiopost/">
+				<p>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+						<path d="M15.929 11.517c.848-1.003 1.354-2.25 1.354-3.601s-.506-2.598-1.354-3.601l1.57-1.439c1.257 1.375 2.022 3.124 2.022 5.04s-.766 3.664-2.022 5.041l-1.57-1.44zm-10.992-10.076l-1.572-1.441c-2.086 2.113-3.365 4.876-3.365 7.916s1.279 5.802 3.364 7.916l1.572-1.441c-1.672-1.747-2.697-4.001-2.697-6.475s1.026-4.728 2.698-6.475zm1.564 11.515l1.57-1.439c-.848-1.003-1.354-2.25-1.354-3.601s.506-2.598 1.354-3.601l-1.57-1.439c-1.257 1.375-2.022 3.124-2.022 5.04s.765 3.664 2.022 5.04zm14.134-12.956l-1.571 1.441c1.672 1.747 2.697 4.001 2.697 6.475s-1.025 4.728-2.697 6.475l1.572 1.441c2.085-2.115 3.364-4.877 3.364-7.916s-1.279-5.803-3.365-7.916zm-2.552 24h-2.154c-.85-2.203-2.261-3.066-3.929-3.066-1.692 0-3.088.886-3.929 3.066h-2.113l5.042-13.268c-1.162-.414-2-1.512-2-2.816 0-1.657 1.344-3 3-3s3 1.343 3 3c0 1.304-.838 2.403-2 2.816l5.083 13.268zm-4.077-5l-2.006-5.214-2.006 5.214h4.012z"/>
+					</svg>
+				</p>
+			</a>
+			<a href="<?php echo home_url('/') ?>radiopost/">
+				<p>ティーラジ配信中。</p>
+			</a>
 		</div>
 	</div>
 
@@ -129,32 +145,7 @@
 
 				<h2 class="top-post-title"><?php the_title_attribute(); ?></h2>
 
-				<ul class="top-shareList">
-					<!--<li class="twitter">
-						<a href="https://twitter.com/share?url=<?php the_permalink(); ?>" target="_blank"data-dnt="true">
-							<i class="fa fa-twitter fa-fw" aria-hidden="true"></i>
-						</a>
-					</li>
-					<li class="facebook">
-						<a href="http://www.facebook.com/sharer.php?src=bm&u=<?php the_permalink(); ?>" target="_blank">
-							<i class="fa fa-facebook fa-fw" aria-hidden="true"></i>
-						</a>
-					</li>
-					<li class="hatebu">
-						<a href="http://b.hatena.ne.jp/add?mode=confirm&url=<?php the_permalink(); ?>" target="_blank">
-							<span class="hatebu-logo">B!</span>
-						</a>
-					</li>
-					<li class="pocket">
-						<a href="http://getpocket.com/edit?url=<?php the_permalink(); ?>&title=<?php the_title_attribute(); ?>" target="_blank">
-							<i class="fa fa-get-pocket fa-fw" aria-hidden="true"></i>
-						</a>
-					</li>
-					<li class="line">
-						<a href="http://line.me/R/msg/text/?<?php the_permalink(); ?>" target="_blank">
-							<i class="fa fa-get-pocket fa-fw" aria-hidden="true"></i>
-						</a>
-					</li>-->
+				<ul class="top-shareList disapearMB">
 
 					<li class="shareList__item">
 						<a class="shareList__link icon-twitter" href="https://twitter.com/share?url=<?php the_permalink(); ?>" target="_blank" title="Twitter"></a>

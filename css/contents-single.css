@@ -38,9 +38,8 @@
 .container h2.top-post-title {
   max-width: 800px;
   font-size: 2rem;
-  font-weight: bold;
   color: #fff;
-  display: inline-block;
+  display: block;
   position: absolute;
   top: 40%;
   left: 0;
@@ -75,10 +74,6 @@
   -o-transition: 0.1s;
   transition: 0.1s;
   margin: 1rem;
-  background: #fff;
-}
-.top-header .container ul.top-shareList li.hatebu a span {
-  font-weight: bold;
 }
 
 .top-header .container ul.top-shareList li a {
@@ -86,30 +81,8 @@
 }
 
 .top-header .container ul.top-shareList li a i {
-  vertical-align: center;
+  vertical-align: middle;
 }
-
-/*
-.top-header .container ul.top-shareList li.twitter {
-  background: rgba(85,172,238,0.9);
-}
-
-.top-header .container ul.top-shareList li.facebook {
-  background: rgba(59,89,152,0.9);
-}
-
-.top-header .container ul.top-shareList li.hatebu {
-  background: rgba(60,125,209,0.9);
-}
-.top-header .container ul.top-shareList li.hatebu a span {
-  font-weight: bold;
-}
-
-.top-header .container ul.top-shareList li.pocket {
-  background: rgba(237,64,85,0.9);
-}
-*/
-
 
 /*
  *
@@ -175,7 +148,7 @@ div#contents section.article-list article.article div.description p {
 
 #contents .article-list .article {
   text-align: left;
-  margin: 0 0 1rem;
+  margin: 0 0 4rem;
   padding: 0.5rem 0 3rem 0;
   border-bottom: solid 1px #999;
   position: relative;
@@ -183,7 +156,6 @@ div#contents section.article-list article.article div.description p {
 
 #contents .article-list .article h2.title {
   font-size: 1.8rem;
-  font-weight: bold;
   margin-bottom: 2rem;
   border-top: solid 4px #19448e;
   border-bottom: solid 4px #19448e;
@@ -215,23 +187,56 @@ div#contents section.article-list article.article div.description p {
 }
 
 /* style for content */
-
-.article .description strong {
+.container h2.top-post-title,
+.top-header .container ul.top-shareList li.hatebu a span,
+#contents .article-list .article h2.title,
+.article .description strong,
+.article .description h2 *,
+.article .description h3 *,
+.article .description h3,
+.article .description ol li,
+.article .date-info,
+.article .date-info span,
+#profile-name a,
+.related-entry-title a,
+.share-button h2
+{
   font-weight: bold;
 }
 
 .article .description h2 {
-  background: linear-gradient(transparent 70%, #19448e 70%);
+  /*background: linear-gradient(transparent 70%, #19448e 70%);*/
   font-size: 1.5rem;
-  font-weight: bold;
-  margin: 1rem 0;
+  letter-spacing: 1px;
+  margin: 2rem 0;
+  position: relative;
+  color: #fff;
+  padding: 0.5rem 0.5rem 0.5rem 1.4rem;
+  background-color: #0b204a;
+}
+
+.article .description h2:after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  content: '';
+  width: 18px;
+  height: 4px;
+  background-color: #fff;
+}
+
+.article .description h2:first-letter {
+  font-size: 2rem;
+  color: #fff;
 }
 
 .article .description h3 {
   border-bottom: solid 3px rgba(25, 68, 142, 0.5);
   position: relative;
   font-size: 1.4rem;
-  font-weight: bold;
   margin: 1rem 0;
 }
 
@@ -254,7 +259,7 @@ div#contents section.article-list article.article div.description p {
 }
 
 .article .description h4:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 5 Free";
   content: "\f00c";
   position: absolute;
   font-size: 1.2rem;
@@ -272,7 +277,6 @@ div#contents section.article-list article.article div.description p {
 }
 
 .article .description blockquote {
-  font-style: italic;
   position: relative;
   padding: 1rem 3rem;
   box-sizing: border-box;
@@ -280,8 +284,12 @@ div#contents section.article-list article.article div.description p {
   color: #585858;
 }
 
-blockquote a {
+.article .description blockquote p a *{
   font-style: italic;
+}
+
+.article .description blockquote p a:hover {
+  opacity: 0.7;
 }
 
 .article .description blockquote:before, .article .description blockquote:after {
@@ -292,7 +300,9 @@ blockquote a {
   height: 2rem;
   line-height: 1rem;
   vertical-align: middle;
-  font-family: FontAwesome;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-style: normal;
 }
 
 .article .description blockquote:before {
@@ -334,7 +344,8 @@ blockquote a {
 }
 
 .article .description ul li:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
   content: '\f0da';
   position: absolute;
   left: 1rem;
@@ -354,7 +365,6 @@ blockquote a {
   padding: 0.5rem 0;
   line-height: 1.3rem;
   padding-left: 1.8rem;
-  font-weight: bold;
 }
 
 .article .description ol li:before {
@@ -389,8 +399,9 @@ blockquote a {
 }
 
 .article .description aside:before {
-  font-family: FontAwesome;
-  content: '\f0e6';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: '\f086';
   display: block;
   font-size: 1.1rem;
 }
@@ -444,14 +455,12 @@ blockquote a {
 .article .date-info {
   font-family: 'Share Tech', sans-serif;
   color: rgba(0, 0, 0, 0.5);
-  font-weight: bold;
   margin-bottom: 0.2rem;
 }
 
 .article .date-info span {
   font-size: 1.1rem;
   color: rgba(0, 0, 0, 0.5);
-  font-weight: bold;
 }
 
 .article .article-info {
@@ -478,7 +487,7 @@ blockquote a {
 
 /*
 .cat-ribbon:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 5 Free";
   content: '\f08d';
   display: inline-block;
   transform: rotate(-32deg);
@@ -497,7 +506,7 @@ blockquote a {
 }
 
 .who-wrote {
-  padding: 1rem 1.5rem 2rem;
+  padding: 1rem 1rem 2rem 1rem;
 }
 
 .article-related {
@@ -512,7 +521,7 @@ blockquote a {
 }
 
 #meta-title {
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: bold;
   position: relative;
   text-align: left;
@@ -568,7 +577,6 @@ blockquote a {
 
 #profile-name {
   font-size: 1.1rem;
-  font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
@@ -582,12 +590,19 @@ blockquote a {
 
 #writter-follow .follow-button {
   display: inline-block;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  border: dashed 1px #454545;
+  border-radius: 50%;
+  padding-left: 4px;
+  width: 1.8rem;
+  height: 1.8rem;
+  text-align: center;
 }
 
 #writter-follow .follow-button a {
   display: block;
-  transition: 0.3s ease;
+  transition: 0.2s ease;
+  line-height: 1.8rem;
 }
 
 #writter-follow .follow-button .twitter:hover {
@@ -615,7 +630,7 @@ blockquote a {
 h3#meta-title.meta-related-posts {
   text-align: center;
   padding: 0;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 h3#meta-title.meta-related-posts:before {
@@ -663,7 +678,6 @@ h3#meta-title.meta-related-posts:before {
 }
 
 .related-entry-title a {
-  font-weight: bold;
   transition: 0.2s ease-out;
 }
 
@@ -689,22 +703,76 @@ h3#meta-title.meta-related-posts:before {
 }
 
 .related-entry-thumb img {
-  transition: 0.3s ease-in;
+  transition: 0.2s ease-in;
 }
 
 .related-entry:hover>.related-entry-thumb img {
   opacity: 0.8;
+  background: #ffffff;
 }
 
 .related-entry:hover>.related-entry-content .related-entry-title a {
   opacity: 0.8;
   color: #19448e;
+  background: #ffffff;
 }
 
 .related-entry-read a:hover {
   opacity: 0.8;
   color: #19448e;
+  background: #ffffff;
 }
+
+
+/*
+ *
+ * PreviousPostLink
+ * NextPostLink
+ * CSS
+ *
+ */
+section#nearPost {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  padding: 0rem 0rem;
+  border-collapse: separate;
+  border-spacing: 1rem;
+}
+
+#nearPost div {
+  display: table-cell;
+  vertical-align: top;
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+
+#nearPost div::first-line {
+  font-size: 0.8rem;
+  line-height: 2rem;
+  text-decoration: underline;
+}
+
+#nearPost div a {
+  font-weight: bold;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#nearPost .prev {
+  text-align: left;
+}
+
+#nearPost .next {
+  text-align: right;
+}
+
+#nearPost div:hover a {
+  opacity: 0.9;
+  color: #19448e;
+}
+
 
 /*
  *
@@ -714,6 +782,7 @@ h3#meta-title.meta-related-posts:before {
 
 .share-button {
   text-align: center;
+  margin-top: 2rem;
 }
 
 .share-button ul li {
@@ -731,7 +800,6 @@ h3#meta-title.meta-related-posts:before {
 
 .share-button h2 {
   padding: 0.5rem 0;
-  font-weight: bold;
 }
 
 .share-button .twitter {
@@ -1023,7 +1091,7 @@ ul.toc_list>li {}
 }
 
 .cstmreba a {
-  transition: 0.8s;
+  transition: 0.3s;
   color: #285EFF;
   /* テキストリンクカラー */
 }
@@ -1579,7 +1647,7 @@ article .description .appBox audio {
  *
  */
 #googleForm {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 

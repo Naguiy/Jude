@@ -15,14 +15,6 @@
     <a href="<?php the_permalink(); ?>">
       <p class="title">
         <?php the_title(); ?>
-<!--        
-        <?php
-          if(function_exists('wpp_get_views')) {
-            $views = wpp_get_views( get_the_ID() );
-            echo '<span class="page-views"><i class="fa fa-bar-chart fa-fw" aria-hidden="true"></i>'.$views.'views</span>';
-          }
-        ?>
--->
       </p>
       <p class="excerpt">
         <?php echo get_the_excerpt(); ?>

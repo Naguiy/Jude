@@ -16,7 +16,7 @@
 
 <?php if(is_single() and !wp_is_mobile()): ?>
 
-  <h3 class="widget1-title">ライター</h3>
+  <h3 class="widget1-title disapearMB">ライター</h3>
 
   <?php
    $twitter = get_the_author_meta('twitter');

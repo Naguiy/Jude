@@ -1,5 +1,5 @@
-.header-bg, .top-header {
-  z-index: -2;
+.top-header {
+  z-index: 0;
   background-image: none;
   width: 100%;
   height: 50vw;
@@ -8,29 +8,68 @@
 #header .top-header {
   background-color: rgba(0, 0, 0, 0.4);
 }
-/*
-#header .top-header h1 {
-  top: -20%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-*/
 .container {
   width: 95%;
 }
 .container h2.top-post-title {
-  z-index: -1;
   width: 75%;
   font-size: 1.1rem;
   font-weight: bold;
   color: #fff;
-  display: inline-block;
-  position: fixed;
-  top: 20vw;
-  left: 50%;
-  transform: translateX(-50%);
+  display: block;
+  position: absolute;
+  top: 24%;
+  left: 0;
+  right: 0;
+  margin: 0 auto
 }
+#header .top-header .container {
+  background: rgba(0,0,0,0.4);
+}
+
+
+/*
+ *
+ * SHARE BUTTON IN HEADER
+ * 外部のwebフォントとも連携
+ * fonts/sharebtn/cssにある
+ * style.cssとicon.css
+ *
+ */
+
+ul.top-shareList {
+  margin: 0 auto;
+  text-align: center;
+}
+
+ul.top-shareList li {
+  display: inline-block;
+  width: 18%;
+  line-height: 1.5rem;;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+}
+
+ul.top-shareList li.hatebu a span {
+  font-weight: bold;
+}
+
+ul.top-shareList li a {
+  color: #454545;
+}
+
+ul.top-shareList li a i {
+  vertical-align: middle;
+}
+
+
+/*
+ *
+ * some design for side bar
+ *
+ */
+
 #sidebar {
   min-width: 0px;
   vertical-align: top;
@@ -139,10 +178,35 @@ div#contents section.article-list article.article div.description p {
 }
 
 .article .description h2 {
-  background: linear-gradient(transparent 70%, #19448e 70%);
   font-size: 1.1rem;
+  margin: 2rem 0;
+  position: relative;
+  color: #fff;
+  padding: 0.5rem 0.5rem 0.5rem 1.4rem;
+  background-color: #0b204a;
+}
+
+.article .description h2:after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  content: '';
+  width: 18px;
+  height: 4px;
+  background-color: #fff;
+}
+
+.article .description h2:first-letter {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.article .description h2 *,
+.article .description h3 * {
   font-weight: bold;
-  margin: 1rem 0;
 }
 
 .article .description h3 {
@@ -167,12 +231,13 @@ div#contents section.article-list article.article div.description p {
   line-height: 1.4;
   padding-left: 1.4rem;
   margin-bottom: 0.7rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bolder;
 }
 
 .article .description h4:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
   content: "\f00c";
   position: absolute;
   font-size: 1.2rem;
@@ -198,12 +263,20 @@ div#contents section.article-list article.article div.description p {
   background-color: #efefef;
   color: #585858;
 }
-blockquote a {
+
+.article .description blockquote p a *{
   font-style: italic;
+}
+
+.article .description blockquote p a:hover {
+  opacity: 0.7;
 }
 
 .article .description blockquote:before,
 .article .description blockquote:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-style: normal;
   display: inline-block;
   position: absolute;
   font-size: 1.5rem;
@@ -211,7 +284,6 @@ blockquote a {
   height: 2rem;
   line-height: 1rem;
   vertical-align: middle;
-  font-family: FontAwesome;
 }
 
 .article .description blockquote:before {
@@ -252,7 +324,8 @@ blockquote a {
 }
 
 .article .description ul li:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
   content: '\f0da';
   position: absolute;
   left: 1rem;
@@ -291,8 +364,9 @@ blockquote a {
 }
 
 .article .description aside:before {
-  font-family: FontAwesome;
-  content: '\f0e6';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: '\f086';
   display: block;
   font-size: 1.1rem;
 }
@@ -385,16 +459,6 @@ iframe {
   margin-right: 0.3rem;
 }
 
-/*
-.cat-ribbon:before {
-  font-family: FontAwesome;
-  content: '\f08d';
-  display: inline-block;
-  transform: rotate(-32deg);
-}
-*/
-
-
 
 /*
  *
@@ -407,47 +471,20 @@ iframe {
 }
 
 #meta-title {
-  width: 94%;
+  width: 100%;
   font-size: 1rem;
   font-weight: bold;
-  text-align: left;
+  text-align: center;
   position: relative;
   color: #000;
-  padding: 0rem 0.5rem 0rem 1.5rem;
   border-bottom: solid 3px #454545;
-  margin: 3rem 0 1rem 1rem;
+  margin: 2rem 0 1rem 0;
 }
 
-#meta-title:before {
-  font-family: FontAwesome;
-  display: inline-block;
-  line-height: 2rem;
-  position: absolute;
-  padding: 0rem;
-  color: white;
-  background: #454545;
-  font-weight: normal;
-  width: 2rem;
-  text-align: center;
-  height: 2rem;
-  left: -1rem;
-  top: 50%;
-  -moz-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  border: solid 3px white;
-  border-radius: 50%;
+#profile {
+  padding: 0.5rem 0 1rem 0;
+  margin-bottom: 2rem;
 }
-
-.meta-author:before {
-  content: '\f040';
-}
-.meta-related-posts:before {
-  content: '\f00b';
-}
-
-
 
 #profile-thumbnail {
   display: block;
@@ -465,14 +502,18 @@ iframe {
   display: block;
   width: 100%;
   border-bottom: solid 3px #454545;
+  padding-bottom: 1rem;
 }
 
 #profile-name {
   font-size: 1.3rem;
-  font-weight: bold;
   margin: 0.5rem 0;
   text-decoration: underline;
   text-align: center;
+}
+
+#profile-name a {
+  font-weight: bold;
 }
 
 #profile-info p {
@@ -487,11 +528,17 @@ iframe {
 
 #writter-follow .follow-button {
   display: inline-block;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  padding-left: 6px;
+  border-radius: 50%;
+  border: dashed 1px #454545;
+  margin: 0 4px;
 }
 
 #writter-follow .follow-button a {
-  display: block;
   transition: 0.3s ease;
 }
 
@@ -510,10 +557,10 @@ iframe {
 
 
 /*
-*
-* style for related posts
-*
-*/
+ *
+ * style for related posts
+ *
+ */
 
 h3#meta-title.meta-related-posts {
   width: 100%;
@@ -620,6 +667,45 @@ h3#meta-title.meta-related-posts:before {
 }
 
 
+/*
+ *
+ * PreviousPostLink
+ * NextPostLink
+ * CSS
+ *
+ */
+section#nearPost {
+  width: 100%;
+  padding: 0rem 0.5rem;
+}
+
+#nearPost div {
+  line-height: 1.4rem;
+}
+
+#nearPost div::first-line {
+  font-size: 0.6rem;
+  line-height: 2rem;
+  text-decoration: underline;
+}
+
+#nearPost div a {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+#nearPost .prev {
+  text-align: left;
+  border-right: solid 1px #292c31;
+  padding: 0 0.5rem 0.5rem 0;
+  margin-bottom: 0.5rem;
+}
+
+#nearPost .next {
+  text-align: right;
+  border-left: solid 1px #292c31;
+  padding: 0.5rem 0 0 0.5rem;
+}
 
 
 /*
@@ -629,6 +715,7 @@ h3#meta-title.meta-related-posts:before {
  */
 .share-button {
   text-align: center;
+  margin-top: 1rem;
 }
 
 .share-button ul li {
@@ -1260,4 +1347,14 @@ margin-bottom: 0px;
    font-size: 90%;
    margin-right: 10px;
    font-family: GillSans;
+ }
+
+ /*
+  *
+  * google form css
+  *
+  */
+ iframe#googleForm {
+   margin-bottom: 2rem;
+   height: 45vh;
  }

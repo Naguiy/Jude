@@ -19,17 +19,14 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fonts/sharebtn/css/icon.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fonts/sharebtn/css/style.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/contents-single-radioPost.css">
 	<link rel="stylesheet" media="only screen and (min-width:769px)" href="<?php echo get_stylesheet_uri(); ?>">
 	<link rel="stylesheet" media="only screen and (max-width:768px)" href="<?php echo get_template_directory_uri(); ?>/style-mobile.css">
 	<link rel="stylesheet" media="only screen and (min-width:769px)" href="<?php echo get_template_directory_uri(); ?>/css/sidebar.css">
 	<link rel="stylesheet" media="only screen and (max-width:768px)" href="<?php echo get_template_directory_uri(); ?>/css/sidebar-mobile.css">
 	<?php if (!is_single()): ?>
-		<link rel="stylesheet" media="only screen and (min-width:769px)" href="<?php echo get_template_directory_uri(); ?>/css/contents.css">
-		<link rel="stylesheet" media="only screen and (max-width:768px)" href="<?php echo get_template_directory_uri(); ?>/css/contents-mobile.css">
-	<?php elseif (is_single()): ?>
-		<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
-		<link rel="stylesheet" media="only screen and (min-width:769px)" href="<?php echo get_template_directory_uri(); ?>/css/contents-single.css">
-		<link rel="stylesheet" media="only screen and (max-width:768px)" href="<?php echo get_template_directory_uri(); ?>/css/contents-single-mobile.css">
+	<link rel="stylesheet" media="only screen and (min-width:769px)" href="<?php echo get_template_directory_uri(); ?>/css/contents.css">
+	<link rel="stylesheet" media="only screen and (max-width:768px)" href="<?php echo get_template_directory_uri(); ?>/css/contents-mobile.css">
 	<?php endif; ?>
 
 	<?php wp_head(); ?>
@@ -61,16 +58,15 @@
 
 	<?php
     // カテゴリのIDの取得
-    $music_id = get_cat_ID( 'ミュージック' );
-    $anime_id = get_cat_ID( 'アニメ' );
-    $grumet_id = get_cat_ID( 'グルメ' );
-    $programing_id = get_cat_ID( 'プログラミング' );
-		$radioPost_id = get_cat_ID( 'ティーラジ' );
+    $music_id = get_cat_ID('ミュージック');
+    $anime_id = get_cat_ID('アニメ');
+    $grumet_id = get_cat_ID('グルメ');
+    $programing_id = get_cat_ID('プログラミング');
  	?>
 
 	<div id="drawer-menu-haikei">
 		<div class="search-form drawer-search">
-		  <?php get_template_part( 'searchform' ) ?>
+		  <?php get_template_part('searchform') ?>
 		</div>
 		<div id="drawer-menu">
 			<ul>
@@ -113,16 +109,10 @@
 
     <div class="top-header">
       <div class="container">
-				<h1 class="site-title"><?php echo bloginfo( 'name' ) ?></h1>
-				<p class="catch-frase">サンニン　ノ　ユウシャ　ガ、<br>マダミヌ　アスニ　ユメヲ　イダキ、<br>スキナ　コトヲ　ハッシン　スル　ブログメディア</p>
+				<h1 class="site-title">Triangle Radio</h1>
+				<p class="catch-frase">サンニン　ノ　ユウシャ　ガ、<br>マダミヌ　アスニ　ユメヲ　イダキ、<br>スキナ　コトヲ　ハッシン　スル　ラジオ</p>
       </div>
     </div>
-
-		<div id="radioBanner" class="disapearPC">
-			<a href="<?php echo home_url('/') ?>radiopost/">
-				【WEBラジオ】ティーラジ配信中 <i class="fas fa-microphone-alt fa-fw"></i>
-			</a>
-		</div>
 
 		<nav id="nav">
 			<div class="container">
