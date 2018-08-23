@@ -1,5 +1,5 @@
 <?php
-/* Template Name: CreamPuff */
+/* Template Name: Aloha */
 get_header("radioPost");
 ?>
 
@@ -16,7 +16,7 @@ get_header("radioPost");
 					<?php else : ?>
 						<p>Sorry, there is no post.</p>
 					<?php endif; ?>
-					
+
         </section>
 			</div>
 

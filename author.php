@@ -1,5 +1,5 @@
 <?php
-/* Template Name: CreamPuff */
+/* Template Name: Aloha */
 get_header();
 ?>
 

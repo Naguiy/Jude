@@ -1,12 +1,11 @@
 @charset "UTF-8";
-
 /*
-Theme Name: Jude
-Theme URI: http://Jude.com
+Theme Name: Aloha
+Theme URI: http://Aloha.com
 Author: Naguiy
-Author URI: http://naguiy-jude.com
-Description: A theme that melts like a cream
-Version: 1.2.1
+Author URI: http://naguiy-aloha.com
+Description: The theme that I say unexpectedly Aloha
+Version: 1.0.0
 */
 
 /*
@@ -31,7 +30,6 @@ accent_color: #fff352
  */
 
 html, body {
-  /*font-family: "Orienta","Sawarabi Gothic",sans-serif;*/
   font-family: 'Orienta', YuGothic,'Yu Gothic','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
   background-color: rgba(241, 241, 241, 0);
   text-align: left;
