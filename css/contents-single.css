@@ -32,7 +32,7 @@
 }
 
 #header .top-header .container {
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .container h2.top-post-title {
@@ -68,7 +68,8 @@
   display: inline-block;
   width: 2rem;
   height: 2rem;
-  line-height: 2.1rem;;
+  line-height: 2.1rem;
+  ;
   border-radius: 50%;
   -webkit-transition: 0.1s;
   -o-transition: 0.1s;
@@ -187,20 +188,8 @@ div#contents section.article-list article.article div.description p {
 }
 
 /* style for content */
-.container h2.top-post-title,
-.top-header .container ul.top-shareList li.hatebu a span,
-#contents .article-list .article h2.title,
-.article .description strong,
-.article .description h2 *,
-.article .description h3 *,
-.article .description h3,
-.article .description ol li,
-.article .date-info,
-.article .date-info span,
-#profile-name a,
-.related-entry-title a,
-.share-button h2
-{
+
+.container h2.top-post-title, .top-header .container ul.top-shareList li.hatebu a span, #contents .article-list .article h2.title, .article .description strong, .article .description h2 *, .article .description h3 *, .article .description h3, .article .description ol li, .article .date-info, .article .date-info span, #profile-name a, .related-entry-title a, .share-button h2 {
   font-weight: bold;
 }
 
@@ -284,8 +273,9 @@ div#contents section.article-list article.article div.description p {
   color: #585858;
 }
 
-.article .description blockquote p a *{
+.article .description blockquote p a * {
   font-style: italic;
+  text-decoration: underline;
 }
 
 .article .description blockquote p a:hover {
@@ -354,7 +344,7 @@ div#contents section.article-list article.article div.description p {
 
 .article .description ol {
   counter-reset: number;
-  list-style-type: none!important;
+  list-style-type: none !important;
   padding: 0;
   border-top: solid 2px #454545;
   border-bottom: solid 2px #454545;
@@ -375,7 +365,6 @@ div#contents section.article-list article.article div.description p {
   font-family: 'Share Tech', sans-serif;
   font-size: 1.1rem;
 }
-
 
 /*
 .article .description ol#mokuji {
@@ -723,7 +712,6 @@ h3#meta-title.meta-related-posts:before {
   background: #ffffff;
 }
 
-
 /*
  *
  * PreviousPostLink
@@ -731,6 +719,7 @@ h3#meta-title.meta-related-posts:before {
  * CSS
  *
  */
+
 section#nearPost {
   display: table;
   table-layout: fixed;
@@ -772,7 +761,6 @@ section#nearPost {
   opacity: 0.9;
   color: #19448e;
 }
-
 
 /*
  *
@@ -1645,10 +1633,10 @@ article .description .appBox audio {
  * google form css
  *
  */
+
 #googleForm {
   margin-bottom: 2rem;
 }
-
 
 /*----- スマホのサイズ調整 -----*/
 

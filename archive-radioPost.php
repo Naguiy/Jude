@@ -1,9 +1,19 @@
 <?php
-/* Template Name: Aloha */
+/* Template Name: Archive-radioPost */
 get_header("radioPost");
 ?>
-
+<style type="text/css">
+#top {
+	padding: 0;
+}
+#pankuzu-wrapper {
+	margin-bottom: 0;
+}
+</style>
 	<div id="wrapper">
+		<div class="container bread">
+			<?php dynamic_sidebar('sidebar-6'); ?>
+		</div>
 		<div id="top" class="container clearfix">
 
       <div id="contents">
@@ -18,6 +28,7 @@ get_header("radioPost");
 					<?php endif; ?>
 
         </section>
+				<?php get_template_part('pagination'); ?>
 			</div>
 
 			<?php get_sidebar(); ?>

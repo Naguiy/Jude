@@ -1,9 +1,13 @@
 <?php
-/* Template Name: Archive */
-get_header();
+/* Template Name: Category-radioPost */
+get_header("radioPost");
 ?>
 
 	<div id="wrapper">
+		<div class="container bread">
+			<?php dynamic_sidebar('sidebar-6'); ?>
+		</div>
+
 		<div id="top" class="container clearfix">
 
       <div id="contents">
@@ -11,26 +15,21 @@ get_header();
 
 					<?php if(have_posts()) : ?>
 					<?php while(have_posts()) : the_post(); $counter++; ?>
-
-						<?php if($counter <= 1): ?>
-							<?php get_template_part('content-new'); ?>
-
-						<?php else: ?>
-							<?php get_template_part('content'); ?>
-
-						<?php endif; ?>
+							<?php get_template_part('content-radioPost'); ?>
 					<?php endwhile; ?>
 					<?php else : ?>
 						<p>Sorry, there is no post.</p>
 					<?php endif; ?>
 
         </section>
+
+				<?php get_template_part('pagination'); ?>
+				
 			</div>
 
 			<?php get_sidebar(); ?>
 
 		</div>
-
 	</div>
 
 	<div class="pagetop-btn">

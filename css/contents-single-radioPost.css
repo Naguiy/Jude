@@ -1,3 +1,9 @@
+/*
+ *
+ * Main Style
+ *
+ */
+
 @media screen and (max-width:768px) {
   /*
    *
@@ -17,8 +23,6 @@
   #profile {
     margin-bottom: 1rem;
   }
-
-
   /*
    *
    * PreviousPostLink
@@ -26,35 +30,41 @@
    * CSS
    *
    */
-   section#nearPost {
-     display: table;
-     table-layout: fixed;
-     border-collapse: separate;
-     border-spacing: 0rem;
-   }
-   #nearPost div {
+  section#nearPost {
+    display: table;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 0rem;
+  }
+  #nearPost div {
     line-height: 0.8rem;
     display: table-cell;
-   }
-   #nearPost div::first-line {
+  }
+  #nearPost div::first-line {
     font-size: 0.6rem;
     line-height: 2rem;
     text-decoration: underline;
-   }
-   #nearPost div a {
+  }
+  #nearPost div a {
     font-size: 0.7rem;
     font-weight: bold;
-   }
-   #nearPost .prev {
+  }
+  #nearPost .prev {
     text-align: left;
     border-right: none;
     padding: 0 0.5rem 0.5rem 0;
     margin-bottom: 0.5rem;
     border-right: solid 1px #292c31;
-   }
-   #nearPost .next {
+  }
+  #nearPost .next {
     text-align: right;
     border-left: none;
     padding: 0.5rem 0 0 0.5rem;
-   }
+  }
+}
+
+@media screen and (min-width:769px) {
+  .top-header {
+    height: 20vw;
+  }
 }

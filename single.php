@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Aloha */
+/* Template Name: Single */
 get_header("single");
 ?>
 
