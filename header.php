@@ -113,8 +113,13 @@
 
     <div class="top-header">
       <div class="container">
-				<h1 class="site-title"><?php echo bloginfo( 'name' ) ?></h1>
-				<p class="catch-frase">サンニン　ノ　ユウシャ　ガ、<br>マダミヌ　アスニ　ユメヲ　イダキ、<br>スキナ　コトヲ　ハッシン　スル　ブログメディア</p>
+				<?php if ( is_front_page() || (is_archive() && is_post_type_archive( 'post' ) ) ): ?>
+					<h1 class="site-title"><?php echo bloginfo( 'name' ) ?></h1>
+					<p class="catch-frase">サンニン　ノ　ユウシャ　ガ、<br>マダミヌ　アスニ　ユメヲ　イダキ、<br>スキナ　コトヲ　ハッシン　スル　ブログメディア</p>
+				<?php elseif( is_archive() || is_post_type_archive( 'raioPost' ) ): ?>
+					<h1 class="site-title">Triangle Radio</h1>
+					<p class="catch-frase">サンニン　ノ　ユウシャ　ガ、<br>マダミヌ　アスニ　ユメヲ　イダキ、<br>スキナ　コトヲ　ハッシン　スル　ラジオ</p>
+				<?php endif; ?>
       </div>
     </div>
 
