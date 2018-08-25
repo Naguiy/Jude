@@ -68,6 +68,19 @@ get_header("single");
 						<p>Sorry, there is no post.</p>
 					<?php endif; ?>
 
+					<?php if (is_single() && is_singular( 'post' )): ?>
+					<?php elseif( is_single() || is_singular( 'raioPost' ) ): ?>
+						<h3 id="meta-title">
+							<i class="fas fa-paper-plane fa-fw"></i> おたよりはこちらから
+						</h3>
+
+						<iframe id="googleForm"
+						src="https://docs.google.com/forms/d/e/1FAIpQLSfUNri-j3PmhW4-ALuLjbytfrzLZ0_8PeRqiAKZm8NArnW3sw/viewform?embedded=true"
+						width="750"	height="520" frameborder="0" marginheight="0" marginwidth="0">
+							読み込んでいます...
+						</iframe>
+					<?php endif; ?>
+
         </section>
 
 				<div class="ads">
@@ -90,7 +103,11 @@ get_header("single");
 							<div class="p-shareButton__a-cont">
 								<div class="p-shareButton__a-cont__img" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>')"></div>
 								<div class="p-shareButton__a-cont__btn">
-									<p>この記事が気に入ったらいいね！しよう</p>
+									<?php if (is_single() && is_singular( 'post' )): ?>
+										<p>この記事が気に入ったらいいね！しよう</p>
+									<?php elseif( is_single() || is_singular( 'raioPost' ) ): ?>
+										<p>ティーラジにいいね！しよう</p>
+									<?php endif; ?>
 									<div class="p-shareButton__fb-cont p-shareButton__fb">
 										<div class="fb-like" data-href="https://www.facebook.com/T-report-1509165772455564/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
 										<span class="p-shareButton__fb-unable"></span>
@@ -105,7 +122,11 @@ get_header("single");
 					<div class="p-entry__push">
 						<div class="p-entry__pushThumb" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>')"></div>
 							<div class="p-entry__pushLike">
-								<p>この記事が気に入ったら<br>いいね！しよう</p>
+								<?php if (is_single() && is_singular( 'post' )): ?>
+									<p>この記事が気に入ったら<br>いいね！しよう</p>
+								<?php elseif( is_single() || is_singular( 'raioPost' ) ): ?>
+									<p>ティーラジに<br>いいね！しよう</p>
+								<?php endif; ?>
 							<div class="p-entry__pushButton">
 								<div class="fb-like" data-href="ここにFacebookページのURLを入れる" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
 							</div>
@@ -116,7 +137,11 @@ get_header("single");
 				<!-- 記事がよかったらいいね　ここまで -->
 				<div class="share-button">
 					<h2 style="font-size:1.2rem;">
-						\ この記事をシェア！ /
+						<?php if (is_single() && is_singular( 'post' )): ?>
+							\ この記事をシェア！ /
+						<?php elseif( is_single() || is_singular( 'raioPost' ) ): ?>
+							\ ティーラジをシェア！ /
+						<?php endif; ?>
 					</h2>
 					<ul>
 						<li class="twitter">
@@ -152,12 +177,21 @@ get_header("single");
 				</section>
 
 				<section id="nearPost">
-					<div class="prev">
-						<?php previous_post_link('%link', '<i class="fas fa-angle-double-left fa-fw"></i>前の記事<br>%title'); ?>
-					</div>
-					<div class="next">
-						<?php next_post_link('%link', '次の記事<i class="fas fa-angle-double-right fa-fw"></i><br>%title'); ?>
-					</div>
+					<?php if (is_single() && is_singular( 'post' )): ?>
+						<div class="prev">
+							<?php previous_post_link('%link', '<i class="fas fa-angle-double-left fa-fw"></i>前の記事<br>%title'); ?>
+						</div>
+						<div class="next">
+							<?php next_post_link('%link', '次の記事<i class="fas fa-angle-double-right fa-fw"></i><br>%title'); ?>
+						</div>
+					<?php elseif( is_single() || is_singular( 'raioPost' ) ): ?>
+						<div class="prev">
+							<?php previous_post_link('%link', '<i class="fas fa-backward fa-fw"></i>前回の放送<br>%title'); ?>
+						</div>
+						<div class="next">
+							<?php next_post_link('%link', '次回の放送<i class="fas fa-forward fa-fw"></i><br>%title'); ?>
+						</div>
+					<?php endif; ?>
 				</section>
 			</div>
 
