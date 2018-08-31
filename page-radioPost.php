@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Aloha */
+/* Template Name: Radio Top Page */
 get_header();
 ?>
 
@@ -21,7 +21,7 @@ get_header();
 						<?php endif; ?>
 					<?php endwhile; ?>
 					<?php else : ?>
-						<p class="sorry">Sorry, There is No Post.</p>
+						<p class="sorry">Sorry, there is no post.</p>
 					<?php endif; ?>
 
         </section>

@@ -116,7 +116,12 @@
 				<?php if ( is_front_page() || (is_archive() && is_post_type_archive( 'post' ) ) ): ?>
 					<h1 class="site-title"><?php echo bloginfo( 'name' ) ?></h1>
 					<p class="catch-frase">サンニン　ノ　ユウシャ　ガ、<br>マダミヌ　アスニ　ユメヲ　イダキ、<br>スキナ　コトヲ　ハッシン　スル　ブログメディア</p>
-				<?php elseif( is_archive() || is_post_type_archive( 'raioPost' ) ): ?>
+					<a class="__radioIcon" href="<?php echo home_url('/') ?>radiopost/">
+						<div class="__radioIcon">
+							<i class="fas fa-broadcast-tower"></i>
+						</div>
+					</a>
+				<?php elseif( ( is_archive() || is_post_type_archive( 'raioPost' ) ) || ( is_page() || is_page( 'radioPost' ) ) ): ?>
 					<h1 class="site-title">Triangle Radio</h1>
 					<p class="catch-frase">サンニン　ノ　ユウシャ　ガ、<br>マダミヌ　アスニ　ユメヲ　イダキ、<br>スキナ　コトヲ　ハッシン　スル　ラジオ</p>
 				<?php endif; ?>

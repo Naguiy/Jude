@@ -5,11 +5,15 @@
       <span class="new-ribbon">NEW</span>
     </div>
     <a href="<?php the_permalink(); ?>">
-      <?php if (!wp_is_mobile()): ?>
-      <?php the_post_thumbnail('cinema_scope'); ?>
-      <?php elseif (wp_is_mobile()): ?>
-      <?php the_post_thumbnail('high_ratio'); ?>
-      <?php endif ?>
+      <?php if(has_post_thumbnail()): ?>
+        <?php if (!wp_is_mobile()): ?>
+        <?php the_post_thumbnail('cinema_scope'); ?>
+        <?php elseif (wp_is_mobile()): ?>
+        <?php the_post_thumbnail('high_ratio'); ?>
+        <?php endif; ?>
+      <?php else: ?>
+        <img src="<?php echo get_template_directory_uri(); ?>/img/nothumbnail.jpg" alt="no image">
+      <?php endif; ?>
     </a>
     <div class="post-category">
       <?php $cat = get_the_category(); ?>
