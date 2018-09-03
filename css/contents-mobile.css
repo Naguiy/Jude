@@ -312,6 +312,8 @@ hr.separate:first-of-type {
 div#googleForm {
   margin: 0 auto;
   width: 100%;
+  height: 350px;
+  overflow: hidden;
 }
 
 
@@ -511,7 +513,7 @@ div.profiletxt p.name {
 div.profiletxt div.description {
   margin-bottom: 0.5rem;
   text-align: left;
-  line-height: 1.6;
+  line-height: 1.8;
   font-size: 0.73rem;
 }
 
