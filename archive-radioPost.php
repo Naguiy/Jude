@@ -31,7 +31,7 @@ get_header("radioPost");
 				<?php get_template_part('pagination'); ?>
 			</div>
 
-			<?php get_sidebar(); ?>
+			<?php get_sidebar('radioPost'); ?>
 
 		</div>
 	</div>

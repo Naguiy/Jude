@@ -1,5 +1,7 @@
 <?php
 //カテゴリ情報から関連記事を10個ランダムに呼び出す
+//wp_get_post_tagsならタグ関連の記事
+//get_the_categoryならカテゴリ関連の記事を表示
 $categories = get_the_category($post->ID);
 $category_ID = array();
 foreach ($categories as $category):
@@ -50,7 +52,7 @@ $query = new WP_Query($args); ?>
 
 	<?php endwhile;?>
 <?php else:?>
-	<p>There is no related post.</p>
+	<p style="padding-top:1.1rem;">このカテゴリは<br>まだまだ未開拓なので<br>今後記事が増えていきます。</p>
   <?php
     endif;
     wp_reset_postdata();

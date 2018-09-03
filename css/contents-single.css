@@ -189,7 +189,7 @@ div#contents section.article-list article.article div.description p {
 
 /* style for content */
 
-.container h2.top-post-title, .top-header .container ul.top-shareList li.hatebu a span, #contents .article-list .article h2.title, .article .description strong, .article .description h2 *, .article .description h3 *, .article .description h3, .article .description ol li, .article .date-info, .article .date-info span, #profile-name a, .related-entry-title a, .share-button h2 {
+.container h2.top-post-title, .top-header .container ul.top-shareList li.hatebu a span, #contents .article-list .article h2.title, .article .description strong *, .article .description strong, .article .description h2 *, .article .description h3 *, .article .description h3, .article .description ol li, .article .date-info, .article .date-info span, #profile-name a, .related-entry-title a, .share-button h2 {
   font-weight: bold;
 }
 
@@ -302,8 +302,8 @@ div#contents section.article-list article.article div.description p {
 }
 
 .article .description blockquote:after {
-  bottom: -4px;
-  right: 15px;
+  bottom: 1px;
+  right: 5px;
   content: "\f10e"
 }
 

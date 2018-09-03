@@ -510,7 +510,7 @@ div.top-header p.catch-frase {
 }
 
 #drawer-menu {
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 #drawer-menu ul {
   text-align: center;
@@ -528,7 +528,7 @@ div.top-header p.catch-frase {
 #drawer-sns {
   width: 100%;
   margin: 0 auto;
-  margin-bottom: 12vw;
+  margin-bottom: 7vw;
 }
 #drawer-sns ul {
   width: 100%;

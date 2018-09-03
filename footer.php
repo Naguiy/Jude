@@ -40,6 +40,7 @@
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/scroll_top.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/share_on_subwindow.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/hamburger_menu.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/change_tab.js"></script>
 
 <?php wp_footer(); ?>
 

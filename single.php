@@ -195,7 +195,11 @@ get_header("single");
 				</section>
 			</div>
 
-			<?php get_sidebar(); ?>
+			<?php if (is_single() && is_singular( 'post' )): ?>
+				<?php get_sidebar(); ?>
+			<?php elseif( is_single() || is_singular( 'raioPost' ) ): ?>
+				<?php get_sidebar('radioPost'); ?>
+			<?php endif; ?>
 
 			<section class="article-related">
 				<h3 id="meta-title" class="meta-related-posts">

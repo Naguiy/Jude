@@ -1,0 +1,272 @@
+{
+  "IcoMoonType": "selection",
+  "icons": [
+    {
+      "icon": {
+        "paths": [
+          "M832 128v768h-128v-768h128zM448 896h128v-768h-128v768zM192 896h128v-768h-128v768z"
+        ],
+        "width": 1024,
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "arrest",
+          "lock",
+          "deny",
+          "enclose"
+        ],
+        "grid": 16
+      },
+      "attrs": [],
+      "properties": {
+        "id": 7,
+        "order": 9,
+        "prevSize": 32,
+        "code": 59649,
+        "name": "arrest"
+      },
+      "setIdx": 0,
+      "setId": 3,
+      "iconIdx": 6
+    },
+    {
+      "icon": {
+        "paths": [
+          "M896 128v768h-768v-128h128v-128h128v-128h128v-128h128v-128h128v-128h128z"
+        ],
+        "width": 1024,
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "ascend",
+          "climb",
+          "succeed"
+        ],
+        "grid": 16
+      },
+      "attrs": [],
+      "properties": {
+        "id": 8,
+        "order": 8,
+        "prevSize": 32,
+        "code": 59650,
+        "name": "ascend"
+      },
+      "setIdx": 0,
+      "setId": 3,
+      "iconIdx": 7
+    },
+    {
+      "icon": {
+        "paths": [
+          "M320 768h128v128h-128v-128zM320 128v128h256v128h-256v256h128v-128h256v-384h-384z"
+        ],
+        "width": 1024,
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "ask",
+          "question",
+          "doubt"
+        ],
+        "grid": 16
+      },
+      "attrs": [],
+      "properties": {
+        "id": 9,
+        "order": 10,
+        "prevSize": 32,
+        "code": 59651,
+        "name": "ask"
+      },
+      "setIdx": 0,
+      "setId": 3,
+      "iconIdx": 8
+    },
+    {
+      "icon": {
+        "paths": [
+          "M576 768v-128h-256v-256h256v-128h-384v512h384zM832 384h-128v-128h128v128zM832 768h-128v-128h128v128z"
+        ],
+        "width": 1024,
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "attract",
+          "magnetize"
+        ],
+        "grid": 16
+      },
+      "attrs": [],
+      "properties": {
+        "id": 10,
+        "order": 11,
+        "prevSize": 32,
+        "code": 59652,
+        "name": "attract"
+      },
+      "setIdx": 0,
+      "setId": 3,
+      "iconIdx": 9
+    },
+    {
+      "icon": {
+        "paths": [
+          "M768 128v768l-256-256-256 256v-768h512z"
+        ],
+        "width": 1024,
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "bookmark",
+          "flag",
+          "hold",
+          "label",
+          "mark"
+        ],
+        "grid": 16
+      },
+      "attrs": [],
+      "properties": {
+        "id": 18,
+        "order": 7,
+        "prevSize": 32,
+        "code": 59653,
+        "name": "bookmark"
+      },
+      "setIdx": 0,
+      "setId": 3,
+      "iconIdx": 17
+    },
+    {
+      "icon": {
+        "paths": [
+          "M192 384h128v256h-128v-256zM704 128v768h128v-768h-128zM448 768h128v-512h-128v512z"
+        ],
+        "width": 1024,
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "broadcast",
+          "transmit",
+          "inform",
+          "report"
+        ],
+        "grid": 16
+      },
+      "attrs": [],
+      "properties": {
+        "id": 19,
+        "order": 12,
+        "prevSize": 32,
+        "code": 59654,
+        "name": "broadcast"
+      },
+      "setIdx": 0,
+      "setId": 3,
+      "iconIdx": 18
+    },
+    {
+      "icon": {
+        "paths": [
+          "M192 352h128v544h-128v-544zM704 512v384h128v-384h-128zM448 896h128v-768h-128v768z"
+        ],
+        "width": 1024,
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "report",
+          "broadcast",
+          "tell",
+          "show"
+        ],
+        "grid": 16
+      },
+      "attrs": [],
+      "properties": {
+        "id": 122,
+        "order": 5,
+        "prevSize": 32,
+        "code": 59655,
+        "name": "report"
+      },
+      "setIdx": 0,
+      "setId": 3,
+      "iconIdx": 121
+    },
+    {
+      "icon": {
+        "paths": [
+          "M640 448l-96 96 96 96-192 192-96-96 96-96-96-96 96-96-96-96 192-192 96 96-96 96 96 96z"
+        ],
+        "width": 1024,
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "steam",
+          "iron",
+          "burn",
+          "cook",
+          "fog",
+          "drink",
+          "bake"
+        ],
+        "grid": 16
+      },
+      "attrs": [],
+      "properties": {
+        "id": 143,
+        "order": 3,
+        "prevSize": 32,
+        "code": 59648,
+        "name": "steam"
+      },
+      "setIdx": 0,
+      "setId": 3,
+      "iconIdx": 142
+    }
+  ],
+  "height": 1024,
+  "metadata": {
+    "name": "dotIcon"
+  },
+  "preferences": {
+    "showGlyphs": true,
+    "showQuickUse": true,
+    "showQuickUse2": true,
+    "showSVGs": true,
+    "fontPref": {
+      "prefix": "doticon-",
+      "metadata": {
+        "fontFamily": "dotIcon",
+        "majorVersion": 1,
+        "minorVersion": 0
+      },
+      "metrics": {
+        "emSize": 1024,
+        "baseline": 6.25,
+        "whitespace": 50
+      },
+      "embed": false
+    },
+    "imagePref": {
+      "prefix": "icon-",
+      "png": true,
+      "useClassSelector": true,
+      "color": 0,
+      "bgColor": 16777215,
+      "classSelector": ".icon"
+    },
+    "historySize": 50,
+    "showCodes": true,
+    "gridSize": 16
+  }
+}

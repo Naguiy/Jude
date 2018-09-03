@@ -140,7 +140,7 @@ get_header("single");
 
 			</div>
 
-			<?php get_sidebar(); ?>
+			<?php get_sidebar('radioPost'); ?>
 
 			<section class="article-related">
 				<h3 id="meta-title" class="meta-related-posts">

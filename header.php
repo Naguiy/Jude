@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fonts/sharebtn/css/icon.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fonts/sharebtn/css/style.css">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fonts/dotIcon/style.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css">
 	<link rel="stylesheet" media="only screen and (min-width:769px)" href="<?php echo get_stylesheet_uri(); ?>">
 	<link rel="stylesheet" media="only screen and (max-width:768px)" href="<?php echo get_template_directory_uri(); ?>/style-mobile.css">
@@ -114,15 +115,22 @@
     <div class="top-header">
       <div class="container">
 				<?php if ( is_front_page() || (is_archive() && is_post_type_archive( 'post' ) ) ): ?>
-					<h1 class="site-title"><?php echo bloginfo( 'name' ) ?></h1>
+					<a href="<?php echo home_url('/') ?>"><h1 class="site-title"><?php echo bloginfo( 'name' ) ?></h1></a>
 					<p class="catch-frase">サンニン　ノ　ユウシャ　ガ、<br>マダミヌ　アスニ　ユメヲ　イダキ、<br>スキナ　コトヲ　ハッシン　スル　ブログメディア</p>
-					<a class="__radioIcon" href="<?php echo home_url('/') ?>radiopost/">
-						<div class="__radioIcon">
-							<i class="fas fa-broadcast-tower"></i>
+					<a href="<?php echo home_url('/') ?>what-is-tradio/">
+						<div class="__radioIcon disapearMB">
+							<span>
+								<i class="doticon-steam"></i>
+								<i class="doticon-steam"></i>
+							</span>
+							<figure>
+								<img src="<?php echo get_template_directory_uri() ?>/img/radio-cassette.png" alt="radio">
+								<p>ティーラジ<br>配信中</p>
+							</figure>
 						</div>
 					</a>
 				<?php elseif( ( is_archive() || is_post_type_archive( 'raioPost' ) ) || ( is_page() || is_page( 'radioPost' ) ) ): ?>
-					<h1 class="site-title">Triangle Radio</h1>
+					<a href="<?php echo home_url('/') ?>what-is-tradio/"><h1 class="site-title">Triangle Radio</h1></a>
 					<p class="catch-frase">サンニン　ノ　ユウシャ　ガ、<br>マダミヌ　アスニ　ユメヲ　イダキ、<br>スキナ　コトヲ　ハッシン　スル　ラジオ</p>
 				<?php endif; ?>
       </div>

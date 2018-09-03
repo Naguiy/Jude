@@ -18,57 +18,66 @@ add_theme_support('admin-bar', array('callback'=>'__return_false'));
 /*-- サイドバーの追加 --*/
 //-----------------------------------------
 register_sidebar(array(
-	'name' => __('メインサイドバー','Jude'),
+	'name' => __('メインサイドバー','Aloha'),
 	'id' => 'sidebar-1',
-	'description' => __('メインのサイドバーです','Jude'),
+	'description' => __('メインのサイドバーです','Aloha'),
 	'before_widget' => '<div id="widget1-wrapper">',
 	'after_widget' => '</div>',
 	'before_title' => '<h3 class="widget1-title">',
 	'after_title' => '</h3>',
 ));
 register_sidebar(array(
-	'name' => __('フッターエリア1','Jude'),
+	'name' => __('フッターエリア1','Aloha'),
 	'id' => 'sidebar-2',
-	'description' => __('フッターにカテゴリと検索部分を表示するウィジェット','Jude'),
+	'description' => __('フッターにカテゴリと検索部分を表示するウィジェット','Aloha'),
 	'before_widget' => '<div id="widget2-wrapper">',
 	'after_widget' => '</div>',
 	'before_title' => '<h3 class="widget2-title">',
 	'after_title' => '</h3>',
 ));
 register_sidebar(array(
-	'name' => __('フッタータグ','Jude'),
+	'name' => __('フッタータグ','Aloha'),
 	'id' => 'sidebar-3',
-	'description' => __('フッターにタグを表示するウィジェット','Jude'),
+	'description' => __('フッターにタグを表示するウィジェット','Aloha'),
 	'before_widget' => '<div id="tagcloud-wrapper">',
 	'after_widget' => '</div>',
 	'before_title' => '<h3 class="tagcloud-title">',
 	'after_title' => '</h3>',
 ));
 register_sidebar(array(
-	'name' => __('アーカイブ on フッター','Jude'),
+	'name' => __('アーカイブ on フッター','Aloha'),
 	'id' => 'sidebar-4',
-	'description' => __('フッターにアーカイブを設置するウィジェット','Jude'),
+	'description' => __('フッターにアーカイブを設置するウィジェット','Aloha'),
 	'before_widget' => '<div id="archive-wrapper">',
 	'after_widget' => '</div>',
 	'before_title' => '<h3 class="archive-title">',
 	'after_title' => '</h3>',
 ));
 register_sidebar(array(
-	'name' => __('About TriangleReport','Jude'),
+	'name' => __('About TriangleReport','Aloha'),
 	'id' => 'sidebar-5',
-	'description' => __('ティーレポの説明用','Jude'),
+	'description' => __('ティーレポの説明用','Aloha'),
 	'before_widget' => '<div id="about-wrapper">',
 	'after_widget' => '</div>',
 	'before_title' => '<h3 class="about-title">',
 	'after_title' => '</h3>',
 ));
 register_sidebar(array(
-	'name' => __('パンくずリスト','Jude'),
+	'name' => __('パンくずリスト','Aloha'),
 	'id' => 'sidebar-6',
-	'description' => __('パンくずリスト設置用ウィジェット','Jude'),
+	'description' => __('パンくずリスト設置用ウィジェット','Aloha'),
 	'before_widget' => '<div id="pankuzu-wrapper">',
 	'after_widget' => '</div>',
 	'before_title' => '<h3 class="pankuzu-title">',
+	'after_title' => '</h3>',
+));
+register_sidebar(array(
+	'name' => __('ラジオサイドバー','Aloha'),
+	'id' => 'sidebar-7',
+	'description' => __('ラジオ用ウィジェット','Aloha'),
+	'before_widget' => '<div id="widget1-wrapper">',
+	'after_widget' => '</div>',
+	'before_title' => '<h3 class="widget1-title">',
 	'after_title' => '</h3>',
 ));
 
@@ -113,6 +122,7 @@ add_filter('excerpt_more', 'my_excerpt_more');
 add_theme_support('post-thumbnails');
 add_theme_support('menus');
 // サムネイルのサイズを指定（追加）する
+add_image_size( 'square', 500, 500, true );
 add_image_size( 'high_ratio', 700, 390, true );
 add_image_size( 'golden_ratio', 700, 435, true );
 add_image_size( 'silver_ratio', 700, 500, true );

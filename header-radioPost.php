@@ -109,7 +109,7 @@
 
     <div class="top-header">
       <div class="container">
-				<h1 class="site-title">Triangle Radio</h1>
+				<a href="<?php echo home_url('/') ?>what-is-tradio/"><h1 class="site-title">Triangle Radio</h1></a>
 				<p class="catch-frase">サンニン　ノ　ユウシャ　ガ、<br>マダミヌ　アスニ　ユメヲ　イダキ、<br>スキナ　コトヲ　ハッシン　スル　ラジオ</p>
       </div>
     </div>
