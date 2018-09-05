@@ -9,7 +9,7 @@ foreach ($categories as $category):
 endforeach;
 $args = array(
   'post__not_in' => array($post->ID),
-  'posts_per_page' => 6,
+  'posts_per_page' => 8,
   'category__in' => $category_ID,
   'orderby' => 'rand',
 );

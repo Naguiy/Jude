@@ -223,6 +223,22 @@ span.wpp-views:before {
 }
 
 
+/*
+ *
+ * side bar googleAdsense
+ *
+ */
+#widget1-wrapper div.add-box {
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+#widget1-wrapper div.add-box p {
+  font-size: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
 
 /*
  *

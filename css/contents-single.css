@@ -170,7 +170,7 @@ div#contents section.article-list article.article div.description p {
   height: auto;
   text-align: center;
   display: block;
-  margin-bottom: 2rem;
+  margin-bottom: -1rem;
 }
 
 #contents .article-list .article .thumb img {
@@ -499,7 +499,7 @@ div#contents section.article-list article.article div.description p {
 }
 
 .article-related {
-  padding: 0;
+  padding: 0.5rem;
   text-align: center;
 }
 
@@ -510,7 +510,7 @@ div#contents section.article-list article.article div.description p {
 }
 
 #meta-title {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: bold;
   position: relative;
   text-align: left;
@@ -571,6 +571,7 @@ div#contents section.article-list article.article div.description p {
 
 #profile-info p {
   margin-bottom: 0.5rem;
+  font-size: 0.9rem;
 }
 
 #writter-follow {
@@ -619,7 +620,7 @@ div#contents section.article-list article.article div.description p {
 h3#meta-title.meta-related-posts {
   text-align: center;
   padding: 0;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 h3#meta-title.meta-related-posts:before {
@@ -640,12 +641,18 @@ h3#meta-title.meta-related-posts:before {
   background-color: none;
   width: 100%;
   vertical-align: top;
-  border: solid 1px #d4d4d4;
+  border-bottom: solid 1px #d4d4d4;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .related-entry {
-  width: 30%;
-  margin: 10px 8px 20px 8px;
+  font-size: 0.9rem;
+  max-width: 24%;
+  margin: 10px 0px 20px 0px;
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -770,7 +777,9 @@ section#nearPost {
 
 .share-button {
   text-align: center;
-  margin-top: 2rem;
+  margin: 0 0.5rem 1rem 0.5rem;
+  padding-bottom: 2rem;
+  border-bottom: solid 1px #d4d4d4;
 }
 
 .share-button ul li {
@@ -1652,4 +1661,31 @@ article .description .appBox audio {
     margin-left: 0px !important;
     margin-bottom: 0 !important;
   }
+}
+
+
+/*
+ *
+ * タイトル下の広告ユニット
+ *
+ */
+#titleBottomAdd-wrapper {
+  margin-bottom: 2rem;
+}
+
+#titleBottomAdd-wrapper div.add-box,
+#postBottomAdd-wrapper div.add-box {
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+#titleBottomAdd-wrapper div.add-box p,
+#postBottomAdd-wrapper div.add-box p {
+  font-size: 0.7rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#postBottomAdd-wrapper div.add-box table {
+  margin: auto;
 }

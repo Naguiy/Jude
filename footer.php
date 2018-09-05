@@ -3,11 +3,13 @@
   <div class="container footer-area">
 
     <div class="footer-info">
-      <?php dynamic_sidebar('sidebar-5') ?>
-      <div id="archive-search-container">
-        <?php dynamic_sidebar('sidebar-4') ?>
-      </div>
-      <?php dynamic_sidebar('sidebar-2') ?>
+      <?php if (wp_is_mobile()) {
+        dynamic_sidebar('sidebar-3');
+      } else {
+        dynamic_sidebar('sidebar-2');
+      }
+      ?>
+
     </div>
 
     <div class="copyright">

@@ -700,7 +700,7 @@ footer a {
 }
 
 #widget2-wrapper {
-  padding-left: 1%;
+  width: 100%;
 }
 #archive-wrapper {
   width: 100%;
@@ -713,12 +713,9 @@ footer a {
   display: none;
 }
 
-.widget2-title,
-.tagcloud-title,
-.archive-title,
-.about-title {
-  font-size: 1.1rem;
-  font-weight: bold;
+.widget2-title {
+  font-family: 'Share Tech', sans-serif;
+  font-size: 1.2rem;
   border-bottom: solid 1px #aaafc1;
   padding: 0.2rem 0;
   margin-bottom: 0.5rem;
@@ -733,9 +730,9 @@ footer a {
 
 /*--- tag cloud ---*/
 .tagcloud a {
-  font-size: 0.8rem !important;
+  font-size: 0.7rem !important;
   display: inline-block;
-  margin: 0 0 .3em 1em;
+  margin: 0 0 .3rem 1rem;
   padding: 0;
   position: relative;
   display: inline-block;

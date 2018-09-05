@@ -29,6 +29,9 @@ get_header("single");
 						      <?php the_post_thumbnail('high_ratio'); ?>
 						  </div>
 
+							<!-- GoogleAdsenseの広告ユニット貼り付け -->
+							<?php dynamic_sidebar('sidebar-9'); ?>
+
 							<ul class="top-shareList disapearPC">
 
 								<li class="shareList__item">
@@ -74,18 +77,13 @@ get_header("single");
 
         </section>
 
-				<div class="ads">
-					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-					<!--モバイルディスプレイ-->
-					<ins class="adsbygoogle"
-		   			style="display:block"
-		     		data-ad-client="ca-pub-2428103905476518"
-		     		data-ad-slot="3521835207"
-		     		data-ad-format="auto"></ins>
-					<script>
-						(adsbygoogle = window.adsbygoogle || []).push({});
-					</script>
-				</div>
+				<!-- GoogleAdsenseの広告ユニット貼り付け -->
+				<?php if (wp_is_mobile()) {
+					// code...
+				} else {
+					dynamic_sidebar('sidebar-10');
+				}
+				?>
 
 				<div class="share-button">
 					<h2 style="font-size:1.2rem;">

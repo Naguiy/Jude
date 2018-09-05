@@ -3,16 +3,7 @@
 </div>
 
 <div id="sidebar">
-
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- サイドバーディスプレイ -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:300px;height:250px"
-     data-ad-client="ca-pub-2428103905476518"
-     data-ad-slot="4525771596"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+  <?php dynamic_sidebar('sidebar-8'); ?>
 
 <?php if(is_single() and !wp_is_mobile()): ?>
 
@@ -75,15 +66,6 @@
 
 
   <?php dynamic_sidebar('sidebar-7'); ?>
-
-	  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- サイドバーディスプレイ -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:300px;height:250px"
-     data-ad-client="ca-pub-2428103905476518"
-     data-ad-slot="4525771596"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+  <?php dynamic_sidebar('sidebar-8'); ?>
 
 </div>

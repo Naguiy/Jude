@@ -27,39 +27,30 @@ register_sidebar(array(
 	'after_title' => '</h3>',
 ));
 register_sidebar(array(
-	'name' => __('フッターエリア1','Aloha'),
+	'name' => __('ラジオ固定ページ用サイドバー','Aloha'),
+	'id' => 'sidebar-7',
+	'description' => __('ラジオ用ウィジェット','Aloha'),
+	'before_widget' => '<div id="widget1-wrapper">',
+	'after_widget' => '</div>',
+	'before_title' => '<h3 class="widget1-title">',
+	'after_title' => '</h3>',
+));
+register_sidebar(array(
+	'name' => __('フッターユニット','Aloha'),
 	'id' => 'sidebar-2',
-	'description' => __('フッターにカテゴリと検索部分を表示するウィジェット','Aloha'),
+	'description' => __('フッターのウィジェットを設置','Aloha'),
 	'before_widget' => '<div id="widget2-wrapper">',
 	'after_widget' => '</div>',
 	'before_title' => '<h3 class="widget2-title">',
 	'after_title' => '</h3>',
 ));
 register_sidebar(array(
-	'name' => __('フッタータグ','Aloha'),
+	'name' => __('モバイル用フッターユニット','Aloha'),
 	'id' => 'sidebar-3',
-	'description' => __('フッターにタグを表示するウィジェット','Aloha'),
-	'before_widget' => '<div id="tagcloud-wrapper">',
+	'description' => __('モバイル用にフッターのウィジェットを設置','Aloha'),
+	'before_widget' => '<div id="widget2-wrapper">',
 	'after_widget' => '</div>',
-	'before_title' => '<h3 class="tagcloud-title">',
-	'after_title' => '</h3>',
-));
-register_sidebar(array(
-	'name' => __('アーカイブ on フッター','Aloha'),
-	'id' => 'sidebar-4',
-	'description' => __('フッターにアーカイブを設置するウィジェット','Aloha'),
-	'before_widget' => '<div id="archive-wrapper">',
-	'after_widget' => '</div>',
-	'before_title' => '<h3 class="archive-title">',
-	'after_title' => '</h3>',
-));
-register_sidebar(array(
-	'name' => __('About TriangleReport','Aloha'),
-	'id' => 'sidebar-5',
-	'description' => __('ティーレポの説明用','Aloha'),
-	'before_widget' => '<div id="about-wrapper">',
-	'after_widget' => '</div>',
-	'before_title' => '<h3 class="about-title">',
+	'before_title' => '<h3 class="widget2-title">',
 	'after_title' => '</h3>',
 ));
 register_sidebar(array(
@@ -72,14 +63,29 @@ register_sidebar(array(
 	'after_title' => '</h3>',
 ));
 register_sidebar(array(
-	'name' => __('ラジオサイドバー','Aloha'),
-	'id' => 'sidebar-7',
-	'description' => __('ラジオ用ウィジェット','Aloha'),
+	'name' => __('サイドバー広告ユニット','Aloha'),
+	'id' => 'sidebar-8',
+	'description' => __('サイドバー広告','Aloha'),
 	'before_widget' => '<div id="widget1-wrapper">',
 	'after_widget' => '</div>',
 	'before_title' => '<h3 class="widget1-title">',
 	'after_title' => '</h3>',
 ));
+register_sidebar(array(
+	'name' => __('記事タイトル下広告ユニット','Aloha'),
+	'id' => 'sidebar-9',
+	'description' => __('記事タイトル下広告','Aloha'),
+	'before_widget' => '<div id="titleBottomAdd-wrapper">',
+	'after_widget' => '</div>',
+));
+register_sidebar(array(
+	'name' => __('記事下広告ユニット','Aloha'),
+	'id' => 'sidebar-10',
+	'description' => __('記事下広告','Aloha'),
+	'before_widget' => '<div id="postBottomAdd-wrapper">',
+	'after_widget' => '</div>',
+));
+
 
 //--------------------------------------------------------
 /*-- 投稿にアーカイブ(投稿一覧)を持たせるようにします。 --*/
@@ -279,10 +285,20 @@ function create_post_type() {
 flush_rewrite_rules(false);
 add_action('init', 'create_post_type');	// アクションに上記関数をフック
 
-//---------------------------------------------------
-/*----- おたより募集フォーム挿入ショートコード -----*/
-//---------------------------------------------------
+//--------------------------------------------
+/*----- タグクラウドの表示タグ数を指定 -----*/
+//--------------------------------------------
+function custom_wp_tag_cloud() {
+	$args = array(
+		'echo' => false,
+		'orderby' => 'count',					//使用頻度順に
+		'order' => 'DESC',						//使用頻度の高いものから
+		'number' => 30 								//タグの表示数
+	);
+	$args = wp_parse_args($args,$args);
+	return $args;
+}
 
-
+add_filter('widget_tag_cloud_args', 'custom_wp_tag_cloud');
 
  ?>

@@ -41,6 +41,10 @@
   /*box-shadow: 2px 2px 8px gray;*/
 }
 
+#contents .article-list .article:nth-of-type(5) {
+  border-top: solid 1px #999;
+}
+
 #contents .article-list .latest-article .thumb {
   border: dashed 2px #454545;
 }
@@ -738,3 +742,15 @@ article.recomEntry:hover > div.description > a * {
   font-size: 2rem;
   padding: 0.5rem;
 }
+
+
+/*
+ *
+ * Style for Infeed Add
+ *
+ */
+/*
+section.article-list ins.adsbygoogle {
+  border-bottom: solid 1px #999;
+}
+*/

@@ -46,6 +46,7 @@ h3.widget1-title:after {
   padding-left: 0.5rem;
 }
 
+
 /*
  *
  *wpp-list
@@ -139,8 +140,6 @@ span.wpp-views:before {
 }
 
 
-
-
 /*
  *
  *npcatch
@@ -173,8 +172,6 @@ span.wpp-views:before {
   display: inline-block;
   vertical-align: top;
 }
-
-
 
 
 /*
@@ -216,6 +213,23 @@ span.wpp-views:before {
 }
 
 
+/*
+ *
+ * side bar googleAdsense
+ *
+ */
+#widget1-wrapper div.add-box {
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+#widget1-wrapper div.add-box p {
+  font-size: 0.7rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+
 
 /*
  *
@@ -237,7 +251,6 @@ span.wpp-views:before {
 }
 
 
-
 /*
  *
  *search label
@@ -250,7 +263,6 @@ span.wpp-views:before {
 #widget1-wrapper .searchform .searchfield {
   width: 100%!important;
 }
-
 
 
 /*
@@ -345,51 +357,6 @@ span.wpp-views:before {
   transform: translateX(2px);
 }
 
-
-
 #sidebar .search-form {
   /*display: none;*/
 }
-
-
-
-/*
-.latest-list {
- background: #fff;
-}
-.latest-list h3 {
- padding: 10px 15px;
- background-color: #c00;
- color: #fff;
-}
-.latest-list ul {
-
-}
-.latest-list ul li {
- width: 100%;
- border-bottom: 1px solid #e8e8e8;
-}
-.latest-list ul li a {
- display: block;
- overflow: hidden;
- padding: 8px;
-}
-.latest-list ul li a .latest-list-img {
- float: left;
- width: 100px;
- height: 87px;
- display: block;
-}
-.latest-list ul li a .latest-list-img img {
- max-width: 100%;
- min-height: 100%;
-}
-.latest-list ul li a .latest-list-title {
- width: 218px;
- float: right;
-}
-.latest-list ul li a .latest-list-title p {
- color: #555;
- font-size: 0.75rem;
-}
-*/

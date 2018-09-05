@@ -35,6 +35,9 @@ get_header("single");
 						      <?php the_post_thumbnail('high_ratio'); ?>
 						  </div>
 
+							<!-- GoogleAdsenseの広告ユニット貼り付け -->
+							<?php dynamic_sidebar('sidebar-9'); ?>
+
 							<ul class="top-shareList disapearPC">
 
 								<li class="shareList__item">
@@ -83,9 +86,18 @@ get_header("single");
 
         </section>
 
+				<!-- GoogleAdsenseの広告ユニット貼り付け -->
+				<?php if (wp_is_mobile()) {
+					// code...
+				} else {
+					dynamic_sidebar('sidebar-10');
+				}
+				?>
+
+<!--
 				<div class="ads">
 					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-					<!--モバイルディスプレイ-->
+					<!--モバイルディスプレイ--
 					<ins class="adsbygoogle"
 		   			style="display:block"
 		     		data-ad-client="ca-pub-2428103905476518"
@@ -95,7 +107,7 @@ get_header("single");
 						(adsbygoogle = window.adsbygoogle || []).push({});
 					</script>
 				</div>
-
+-->
 				<!-- 記事がよかったらいいね　ここから -->
 				<?php if(wp_is_mobile()) :?>
 					<div class="p-shareButton p-asideList p-shareButton-bottom">
@@ -172,6 +184,15 @@ get_header("single");
 					</ul>
 				</div>
 
+				<section class="article-related">
+					<h3 id="meta-title" class="meta-related-posts">
+						<i class="fas fa-tag fa-fw"></i> おすすめの記事
+					</h3>
+					<div class="related-entries">
+						<?php get_template_part('related','posts'); ?>
+					</div>
+				</section>
+
 				<section class="who-wrote">
 					<?php get_template_part('profile'); ?>
 				</section>
@@ -193,6 +214,7 @@ get_header("single");
 						</div>
 					<?php endif; ?>
 				</section>
+
 			</div>
 
 			<?php if (is_single() && is_singular( 'post' )): ?>
@@ -200,16 +222,6 @@ get_header("single");
 			<?php elseif( is_single() || is_singular( 'raioPost' ) ): ?>
 				<?php get_sidebar('radioPost'); ?>
 			<?php endif; ?>
-
-			<section class="article-related">
-				<h3 id="meta-title" class="meta-related-posts">
-					<i class="fas fa-tag fa-fw"></i> おすすめの記事
-				</h3>
-				<div class="related-entries">
-					<?php get_template_part('related','posts'); ?>
-				</div>
-			</section>
-
 		</div>
 
 	</div>

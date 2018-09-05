@@ -9,8 +9,34 @@ get_header();
       <div id="contents">
         <section class="article-list">
 
+					<?php
+					$ads_infeed='5';
+					$ads_infeed_count = '1';
+					 ?>
+
 					<?php if(have_posts()) : ?>
 					<?php while(have_posts()) : the_post(); $counter++; ?>
+
+						<?php
+						if($ads_infeed_count == $ads_infeed){
+						 ?>
+
+						 <!-- 取得した広告コード -->
+						 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+						 <ins class="adsbygoogle"
+						      style="display:block"
+						      data-ad-format="fluid"
+						      data-ad-layout-key="-ew+1o+d2-8y-77"
+						      data-ad-client="ca-pub-2428103905476518"
+						      data-ad-slot="7618109456"></ins>
+						 <script>
+						      (adsbygoogle = window.adsbygoogle || []).push({});
+						 </script>
+						 						 
+						 <?php
+					 		}
+							$ads_infeed_count++;
+						  ?>
 
 						<?php if($counter <= 1): ?>
 							<?php get_template_part('content-new'); ?>
